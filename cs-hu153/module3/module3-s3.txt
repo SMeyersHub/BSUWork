@@ -1,0 +1,1022 @@
+[smeyers@localhost ~]$ echo "Scenario 3 - Putting the Squeeze on Files"
+Scenario 3 - Putting the Squeeze on Files
+[smeyers@localhost ~]$ mkdir tmp
+mkdir: cannot create directory ‘tmp’: File exists
+[smeyers@localhost ~]$ cd tmp
+[smeyers@localhost tmp]$ wget https://github.com/BoiseState/CS121-resources/archive/master.zip
+--2019-09-16 19:32:42--  https://github.com/BoiseState/CS121-resources/archive/master.zip
+Resolving github.com (github.com)... 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.112|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/BoiseState/CS121-resources/zip/master [following]
+--2019-09-16 19:32:43--  https://codeload.github.com/BoiseState/CS121-resources/zip/master
+Resolving codeload.github.com (codeload.github.com)... 192.30.253.121
+Connecting to codeload.github.com (codeload.github.com)|192.30.253.121|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘master.zip’
+
+    [      <=>                              ] 4,829,169   3.98MB/s   in 1.2s   
+
+2019-09-16 19:32:44 (3.98 MB/s) - ‘master.zip’ saved [4829169]
+
+[smeyers@localhost tmp]$ unzip master.zip
+Archive:  master.zip
+727b8d5b8ff0a9ad88e50bef2217e141c6be44c7
+   creating: CS121-resources-master/
+  inflating: CS121-resources-master/.gitignore  
+  inflating: CS121-resources-master/README.md  
+   creating: CS121-resources-master/etext/
+  inflating: CS121-resources-master/etext/APoemForParsing.txt  
+  inflating: CS121-resources-master/etext/Alice-in-Wonderland.txt  
+  inflating: CS121-resources-master/etext/Antony-and-Cleopatra.txt  
+  inflating: CS121-resources-master/etext/Bill-of-Rights.txt  
+  inflating: CS121-resources-master/etext/Clinton-93-speech.txt  
+  inflating: CS121-resources-master/etext/Decl-of-Ind-USA.txt  
+  inflating: CS121-resources-master/etext/Flatland.txt                          
+  inflating: CS121-resources-master/etext/Gettysburg-Address.txt                
+  inflating: CS121-resources-master/etext/Idaho-House-Bill.txt                  
+  inflating: CS121-resources-master/etext/LICENSE                               
+  inflating: CS121-resources-master/etext/Leaves-of-Grass.txt                   
+  inflating: CS121-resources-master/etext/Microsoft-XP-License                  
+  inflating: CS121-resources-master/etext/MoreText.txt                          
+  inflating: CS121-resources-master/etext/Patrick-Henry.txt                     
+  inflating: CS121-resources-master/etext/Through-the-Looking-Glass.txt         
+  inflating: CS121-resources-master/etext/Tom-Sawyer-Abroad.txt                 
+  inflating: CS121-resources-master/etext/US-Constitution.txt  
+  inflating: CS121-resources-master/etext/WordsToParseBy.txt  
+  inflating: CS121-resources-master/etext/etext.zip  
+ extracting: CS121-resources-master/etext/sample.txt  
+   creating: CS121-resources-master/examples/
+ extracting: CS121-resources-master/examples/.gitignore  
+  inflating: CS121-resources-master/examples/Makefile  
+  inflating: CS121-resources-master/examples/README.md  
+   creating: CS121-resources-master/examples/UML/
+ extracting: CS121-resources-master/examples/UML/AddressBookClasses.dia  
+ extracting: CS121-resources-master/examples/UML/Aggregation1.dia  
+  inflating: CS121-resources-master/examples/UML/ClockHierarchy.dia  
+ extracting: CS121-resources-master/examples/UML/Drawable.dia  
+ extracting: CS121-resources-master/examples/UML/Employees.dia  
+ extracting: CS121-resources-master/examples/UML/Implements1.dia  
+ extracting: CS121-resources-master/examples/UML/Inheritance1.dia  
+ extracting: CS121-resources-master/examples/UML/Inheritance2.dia  
+ extracting: CS121-resources-master/examples/UML/Inheritance3.dia  
+ extracting: CS121-resources-master/examples/UML/Interface1.dia  
+ extracting: CS121-resources-master/examples/UML/Rectangle.dia  
+ extracting: CS121-resources-master/examples/UML/RectangleUser.dia  
+ extracting: CS121-resources-master/examples/UML/object-interaction.dia  
+ extracting: CS121-resources-master/examples/UML/objects1.dia  
+ extracting: CS121-resources-master/examples/UML/package1.dia  
+   creating: CS121-resources-master/examples/chap01/
+  inflating: CS121-resources-master/examples/chap01/.classpath  
+  inflating: CS121-resources-master/examples/chap01/.project  
+  inflating: CS121-resources-master/examples/chap01/Lincoln.java  
+  inflating: CS121-resources-master/examples/chap01/Lincoln2.java  
+  inflating: CS121-resources-master/examples/chap01/Lincoln3.java  
+  inflating: CS121-resources-master/examples/chap01/Makefile  
+   creating: CS121-resources-master/examples/chap02/
+  inflating: CS121-resources-master/examples/chap02/.classpath  
+  inflating: CS121-resources-master/examples/chap02/.project  
+  inflating: CS121-resources-master/examples/chap02/Addition.java  
+  inflating: CS121-resources-master/examples/chap02/BlankOrDark.java  
+  inflating: CS121-resources-master/examples/chap02/CarriageReturnDemo.java  
+  inflating: CS121-resources-master/examples/chap02/Countdown.java  
+  inflating: CS121-resources-master/examples/chap02/Echo.java  
+  inflating: CS121-resources-master/examples/chap02/Facts.java  
+  inflating: CS121-resources-master/examples/chap02/FloatingTest.java  
+  inflating: CS121-resources-master/examples/chap02/GasMileage.java  
+  inflating: CS121-resources-master/examples/chap02/Geometry.java  
+  inflating: CS121-resources-master/examples/chap02/Makefile  
+  inflating: CS121-resources-master/examples/chap02/PianoKeys.java  
+  inflating: CS121-resources-master/examples/chap02/Roses.java  
+  inflating: CS121-resources-master/examples/chap02/StuckDance.java  
+  inflating: CS121-resources-master/examples/chap02/TempConverter.java  
+  inflating: CS121-resources-master/examples/chap02/Test.java  
+  inflating: CS121-resources-master/examples/chap02/TestInt.java  
+  inflating: CS121-resources-master/examples/chap02/Volume.java  
+   creating: CS121-resources-master/examples/chap03/
+  inflating: CS121-resources-master/examples/chap03/.classpath  
+  inflating: CS121-resources-master/examples/chap03/.project  
+  inflating: CS121-resources-master/examples/chap03/BasicDecimalFormat.java  
+  inflating: CS121-resources-master/examples/chap03/BasicNumberFormat.java  
+  inflating: CS121-resources-master/examples/chap03/CircleStatsDecimalFormat.java  
+  inflating: CS121-resources-master/examples/chap03/CircleStatsFormatter.java  
+  inflating: CS121-resources-master/examples/chap03/CircleStatsPrintfTable.java  
+  inflating: CS121-resources-master/examples/chap03/DateExample.java  
+  inflating: CS121-resources-master/examples/chap03/DiceRoll.java  
+  inflating: CS121-resources-master/examples/chap03/DivisionTest.java  
+  inflating: CS121-resources-master/examples/chap03/FormatterExample.java  
+  inflating: CS121-resources-master/examples/chap03/Makefile  
+  inflating: CS121-resources-master/examples/chap03/PP33.java  
+  inflating: CS121-resources-master/examples/chap03/ParseInput.java  
+  inflating: CS121-resources-master/examples/chap03/PrimitiveTypes.java  
+  inflating: CS121-resources-master/examples/chap03/PrintfExample.java  
+  inflating: CS121-resources-master/examples/chap03/Purchase.java  
+  inflating: CS121-resources-master/examples/chap03/Quadratic.java  
+  inflating: CS121-resources-master/examples/chap03/RandomMovement.java  
+  inflating: CS121-resources-master/examples/chap03/RandomNumbers.java  
+  inflating: CS121-resources-master/examples/chap03/RollTheDice.java  
+  inflating: CS121-resources-master/examples/chap03/StringPlay.java  
+  inflating: CS121-resources-master/examples/chap03/TrigDemo.java  
+  inflating: CS121-resources-master/examples/chap03/unicorn-kitty.jpg  
+   creating: CS121-resources-master/examples/chap04/
+  inflating: CS121-resources-master/examples/chap04/.classpath  
+  inflating: CS121-resources-master/examples/chap04/.project  
+  inflating: CS121-resources-master/examples/chap04/Age.java  
+  inflating: CS121-resources-master/examples/chap04/AgePhrases.java  
+  inflating: CS121-resources-master/examples/chap04/AnimatedRandomBoxes.java  
+  inflating: CS121-resources-master/examples/chap04/ArrayListColors.java  
+  inflating: CS121-resources-master/examples/chap04/ArrayListIntegers.java  
+  inflating: CS121-resources-master/examples/chap04/Average.java  
+  inflating: CS121-resources-master/examples/chap04/AverageWithIterator.java  
+  inflating: CS121-resources-master/examples/chap04/Beatles.java  
+  inflating: CS121-resources-master/examples/chap04/Bullseye.java  
+  inflating: CS121-resources-master/examples/chap04/BullseyeScalable.java  
+  inflating: CS121-resources-master/examples/chap04/CharacterMathAndComparison.java  
+  inflating: CS121-resources-master/examples/chap04/DateInputExample.java  
+  inflating: CS121-resources-master/examples/chap04/Day.java  
+  inflating: CS121-resources-master/examples/chap04/DigitalClock.java  
+  inflating: CS121-resources-master/examples/chap04/FavoriteColors.java  
+  inflating: CS121-resources-master/examples/chap04/FavoriteColorsWithIf.java  
+  inflating: CS121-resources-master/examples/chap04/GradeReport.java  
+  inflating: CS121-resources-master/examples/chap04/Guessing.java  
+  inflating: CS121-resources-master/examples/chap04/InfiniteCount.java  
+  inflating: CS121-resources-master/examples/chap04/InfiniteLoop.java  
+  inflating: CS121-resources-master/examples/chap04/Makefile  
+  inflating: CS121-resources-master/examples/chap04/MinOfFour.java  
+  inflating: CS121-resources-master/examples/chap04/MinOfFourTest.java  
+  inflating: CS121-resources-master/examples/chap04/MinOfThree.java  
+  inflating: CS121-resources-master/examples/chap04/Multiples.java  
+  inflating: CS121-resources-master/examples/chap04/Numbers.java  
+  inflating: CS121-resources-master/examples/chap04/OnlyWantInteger.java  
+  inflating: CS121-resources-master/examples/chap04/PalindromeTester.java  
+  inflating: CS121-resources-master/examples/chap04/PoetryPlay.java  
+  inflating: CS121-resources-master/examples/chap04/Pyramid.java  
+  inflating: CS121-resources-master/examples/chap04/Rainbow.java  
+  inflating: CS121-resources-master/examples/chap04/RandomBoxes.java  
+  inflating: CS121-resources-master/examples/chap04/ReverseNumber.java  
+  inflating: CS121-resources-master/examples/chap04/Stars.java  
+  inflating: CS121-resources-master/examples/chap04/StringEquals.java  
+  inflating: CS121-resources-master/examples/chap04/SwitchDays.java  
+  inflating: CS121-resources-master/examples/chap04/SwitchOptions.java  
+  inflating: CS121-resources-master/examples/chap04/TestDoubleCompare.java  
+  inflating: CS121-resources-master/examples/chap04/ToleranceForPi.java  
+  inflating: CS121-resources-master/examples/chap04/UsePoint.java  
+  inflating: CS121-resources-master/examples/chap04/Wages.java  
+  inflating: CS121-resources-master/examples/chap04/WinPercentage.java  
+   creating: CS121-resources-master/examples/chap04/inclass/
+  inflating: CS121-resources-master/examples/chap04/inclass/ArrayListInputDemo.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/ArrayListIntro.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/BooleanExpressions.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/CharacterMath.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/ColorCompare.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/ConditionalCircles.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/DoubleCompareWithTolerance.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/FavoriteColors.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/FavoriteColorsWithIf.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/HigherLower.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/InfiniteLoop.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/LoginHandler.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/MenuOption.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/MultiplesOfThree.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/RunningSum.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/Stars.java  
+  inflating: CS121-resources-master/examples/chap04/inclass/StringCompare.java  
+  inflating: CS121-resources-master/examples/chap04/testMinOfFour.sh  
+   creating: CS121-resources-master/examples/chap05/
+  inflating: CS121-resources-master/examples/chap05/.classpath  
+  inflating: CS121-resources-master/examples/chap05/.project  
+  inflating: CS121-resources-master/examples/chap05/Account.java  
+  inflating: CS121-resources-master/examples/chap05/Alice-in-Wonderland.txt  
+  inflating: CS121-resources-master/examples/chap05/AmazonAccount.java  
+  inflating: CS121-resources-master/examples/chap05/AmazonAccountManager.java  
+  inflating: CS121-resources-master/examples/chap05/AmazonAddress.java  
+  inflating: CS121-resources-master/examples/chap05/Coin.java  
+  inflating: CS121-resources-master/examples/chap05/CountFlips.java  
+  inflating: CS121-resources-master/examples/chap05/Die.java  
+  inflating: CS121-resources-master/examples/chap05/Dog.java  
+  inflating: CS121-resources-master/examples/chap05/FavoriteColorsByOrdinal.java  
+  inflating: CS121-resources-master/examples/chap05/FavoriteColorsWithEnum.java  
+  inflating: CS121-resources-master/examples/chap05/FlipRace.java  
+  inflating: CS121-resources-master/examples/chap05/Hatchery.java  
+  inflating: CS121-resources-master/examples/chap05/IceCream.java  
+  inflating: CS121-resources-master/examples/chap05/Kennel.java  
+  inflating: CS121-resources-master/examples/chap05/Makefile  
+  inflating: CS121-resources-master/examples/chap05/MethodOverloader.java  
+  inflating: CS121-resources-master/examples/chap05/NSidedDie.java  
+  inflating: CS121-resources-master/examples/chap05/Navigator.java  
+  inflating: CS121-resources-master/examples/chap05/Num.java  
+  inflating: CS121-resources-master/examples/chap05/ParameterModifier.java  
+  inflating: CS121-resources-master/examples/chap05/ParameterTester.java  
+  inflating: CS121-resources-master/examples/chap05/Penguin.java  
+  inflating: CS121-resources-master/examples/chap05/PigLatin.java  
+  inflating: CS121-resources-master/examples/chap05/PigLatinFile.java  
+  inflating: CS121-resources-master/examples/chap05/PigLatinTranslator.java  
+  inflating: CS121-resources-master/examples/chap05/RationalNumber.java  
+  inflating: CS121-resources-master/examples/chap05/RationalTester.java  
+  inflating: CS121-resources-master/examples/chap05/RollingDice.java  
+  inflating: CS121-resources-master/examples/chap05/RollingNSidedDice.java  
+  inflating: CS121-resources-master/examples/chap05/Slogan.java  
+  inflating: CS121-resources-master/examples/chap05/SloganCounter.java  
+  inflating: CS121-resources-master/examples/chap05/SnakeEyes.java  
+  inflating: CS121-resources-master/examples/chap05/Sphere.java  
+  inflating: CS121-resources-master/examples/chap05/SphereBag.java  
+  inflating: CS121-resources-master/examples/chap05/SuitTest.java  
+  inflating: CS121-resources-master/examples/chap05/Transactions.java  
+   creating: CS121-resources-master/examples/chap05/inclass/
+  inflating: CS121-resources-master/examples/chap05/inclass/Photo.java  
+  inflating: CS121-resources-master/examples/chap05/inclass/PhotoAlbum.java  
+  inflating: CS121-resources-master/examples/chap05/inclass/PhotoAlbumManager.java  
+  inflating: CS121-resources-master/examples/chap05/inclass/album.txt  
+  inflating: CS121-resources-master/examples/chap05/parsing1.txt  
+   creating: CS121-resources-master/examples/chap06/
+  inflating: CS121-resources-master/examples/chap06/.classpath  
+  inflating: CS121-resources-master/examples/chap06/.project  
+  inflating: CS121-resources-master/examples/chap06/BorderDemo.java  
+  inflating: CS121-resources-master/examples/chap06/BorderPanel.java  
+  inflating: CS121-resources-master/examples/chap06/BoxPanelXAxis.java  
+  inflating: CS121-resources-master/examples/chap06/BoxPanelYAxis.java  
+  inflating: CS121-resources-master/examples/chap06/ButtonTextCycler.java  
+  inflating: CS121-resources-master/examples/chap06/Circle.java  
+  inflating: CS121-resources-master/examples/chap06/CircleMaker.java  
+  inflating: CS121-resources-master/examples/chap06/CircleMakerDrawPanel.java  
+  inflating: CS121-resources-master/examples/chap06/ColorChooser.java  
+  inflating: CS121-resources-master/examples/chap06/ColorChooserPanel.java  
+  inflating: CS121-resources-master/examples/chap06/ColorJList.java  
+  inflating: CS121-resources-master/examples/chap06/ColorJListPanel.java  
+  inflating: CS121-resources-master/examples/chap06/ComplexPanel.java  
+  inflating: CS121-resources-master/examples/chap06/Coordinates.java  
+  inflating: CS121-resources-master/examples/chap06/CoordinatesPanel.java  
+  inflating: CS121-resources-master/examples/chap06/Direction.java  
+  inflating: CS121-resources-master/examples/chap06/DirectionPanel.java  
+  inflating: CS121-resources-master/examples/chap06/DisplayColor.java  
+  inflating: CS121-resources-master/examples/chap06/Dots.java  
+  inflating: CS121-resources-master/examples/chap06/DotsPanel.java  
+  inflating: CS121-resources-master/examples/chap06/EvenOdd.java  
+  inflating: CS121-resources-master/examples/chap06/Fahrenheit.java  
+  inflating: CS121-resources-master/examples/chap06/FahrenheitPanel.java  
+  inflating: CS121-resources-master/examples/chap06/FileReader.java  
+  inflating: CS121-resources-master/examples/chap06/FileReaderPanel.java  
+  inflating: CS121-resources-master/examples/chap06/FlowPanel.java  
+  inflating: CS121-resources-master/examples/chap06/FrameExample1.java  
+  inflating: CS121-resources-master/examples/chap06/FrameExample2.java  
+  inflating: CS121-resources-master/examples/chap06/GameBoard.java  
+  inflating: CS121-resources-master/examples/chap06/GameBoardPanel.java  
+  inflating: CS121-resources-master/examples/chap06/GridPanel.java  
+  inflating: CS121-resources-master/examples/chap06/GuiPanel.java  
+  inflating: CS121-resources-master/examples/chap06/GuiRunner.java  
+  inflating: CS121-resources-master/examples/chap06/IntroPanel.java  
+  inflating: CS121-resources-master/examples/chap06/JListDemo.java  
+  inflating: CS121-resources-master/examples/chap06/JListDemoPanel.java  
+  inflating: CS121-resources-master/examples/chap06/JOptionPaneDemo.java  
+  inflating: CS121-resources-master/examples/chap06/JOptionPaneDemoPanel.java  
+  inflating: CS121-resources-master/examples/chap06/JukeBox.java  
+  inflating: CS121-resources-master/examples/chap06/JukeBoxControls.java  
+  inflating: CS121-resources-master/examples/chap06/LayoutDemo.java  
+  inflating: CS121-resources-master/examples/chap06/LeftRight.java  
+  inflating: CS121-resources-master/examples/chap06/LeftRightPanel.java  
+  inflating: CS121-resources-master/examples/chap06/LightBulb.java  
+  inflating: CS121-resources-master/examples/chap06/LightBulbControls.java  
+  inflating: CS121-resources-master/examples/chap06/LightBulbPanel.java  
+  inflating: CS121-resources-master/examples/chap06/Makefile  
+  inflating: CS121-resources-master/examples/chap06/MiniColorChooserV1.java  
+  inflating: CS121-resources-master/examples/chap06/MiniColorChooserV2.java  
+  inflating: CS121-resources-master/examples/chap06/PanelReplacer.java  
+  inflating: CS121-resources-master/examples/chap06/PushCounter.java  
+  inflating: CS121-resources-master/examples/chap06/PushCounter2.java  
+  inflating: CS121-resources-master/examples/chap06/PushCounterPanel.java  
+  inflating: CS121-resources-master/examples/chap06/QuoteOptions.java  
+  inflating: CS121-resources-master/examples/chap06/QuoteOptionsPanel.java  
+  inflating: CS121-resources-master/examples/chap06/README.html  
+  inflating: CS121-resources-master/examples/chap06/Rebound.java  
+  inflating: CS121-resources-master/examples/chap06/ReboundPanel.java  
+  inflating: CS121-resources-master/examples/chap06/RubberLines.java  
+  inflating: CS121-resources-master/examples/chap06/RubberLinesPanel.java  
+  inflating: CS121-resources-master/examples/chap06/SlideColor.java  
+  inflating: CS121-resources-master/examples/chap06/SlideColorPanel.java  
+  inflating: CS121-resources-master/examples/chap06/StyleOptions.java  
+  inflating: CS121-resources-master/examples/chap06/StyleOptionsPanel.java  
+  inflating: CS121-resources-master/examples/chap06/TextAreaTest.java  
+  inflating: CS121-resources-master/examples/chap06/TimerDemo.java  
+  inflating: CS121-resources-master/examples/chap06/TimerDemoCooler.java  
+  inflating: CS121-resources-master/examples/chap06/TimerDemoCoolerPanel.java  
+  inflating: CS121-resources-master/examples/chap06/TimerDemoPanel.java  
+  inflating: CS121-resources-master/examples/chap06/TwoButtons.java  
+  inflating: CS121-resources-master/examples/chap06/TwoButtonsPanel.java  
+  inflating: CS121-resources-master/examples/chap06/TwoDColorChooser.java  
+  inflating: CS121-resources-master/examples/chap06/arrowDown.gif  
+  inflating: CS121-resources-master/examples/chap06/arrowLeft.gif  
+  inflating: CS121-resources-master/examples/chap06/arrowRight.gif  
+  inflating: CS121-resources-master/examples/chap06/arrowUp.gif  
+   creating: CS121-resources-master/examples/chap06/basics/
+  inflating: CS121-resources-master/examples/chap06/basics/ButtonsAndLabels.java  
+  inflating: CS121-resources-master/examples/chap06/basics/CreateWindows.java  
+  inflating: CS121-resources-master/examples/chap06/basics/DropDownDialog.java  
+  inflating: CS121-resources-master/examples/chap06/basics/FileChooser.java  
+  inflating: CS121-resources-master/examples/chap06/basics/FrameDemo1.java  
+  inflating: CS121-resources-master/examples/chap06/basics/FrameDemo2.java  
+  inflating: CS121-resources-master/examples/chap06/basics/FrameDemo3.java  
+  inflating: CS121-resources-master/examples/chap06/basics/FrameDemo4.java  
+  inflating: CS121-resources-master/examples/chap06/basics/LoadScrollableImage.java  
+  inflating: CS121-resources-master/examples/chap06/basics/MenuDemo.java  
+  inflating: CS121-resources-master/examples/chap06/basics/MouseButtonsDemo.java  
+  inflating: CS121-resources-master/examples/chap06/basics/README.html  
+  inflating: CS121-resources-master/examples/chap06/basics/ScaledImage.java  
+  inflating: CS121-resources-master/examples/chap06/basics/ScaledImagePanel.java  
+  inflating: CS121-resources-master/examples/chap06/basics/SimpleFrame1.java  
+  inflating: CS121-resources-master/examples/chap06/basics/SimpleFrame2.java  
+  inflating: CS121-resources-master/examples/chap06/basics/SplitWindows.java  
+  inflating: CS121-resources-master/examples/chap06/basics/TextAreaAndButtons.java  
+  inflating: CS121-resources-master/examples/chap06/basics/TextAreaListener.java  
+  inflating: CS121-resources-master/examples/chap06/basics/TextWindow.java  
+   creating: CS121-resources-master/examples/chap06/basics/photos/
+  inflating: CS121-resources-master/examples/chap06/basics/photos/01.jpg  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo000.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo001.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo002.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo003.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo004.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo005.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo006.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo007.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo008.png  
+  inflating: CS121-resources-master/examples/chap06/basics/photos/photo009.png  
+  inflating: CS121-resources-master/examples/chap06/basics/play.gif  
+  inflating: CS121-resources-master/examples/chap06/basics/play.png  
+  inflating: CS121-resources-master/examples/chap06/basics/stop.gif  
+  inflating: CS121-resources-master/examples/chap06/basics/stop.png  
+   creating: CS121-resources-master/examples/chap06/colorchooser/
+  inflating: CS121-resources-master/examples/chap06/colorchooser/ColorChooser.java  
+  inflating: CS121-resources-master/examples/chap06/colorchooser/ColorChooserPanel.java  
+  inflating: CS121-resources-master/examples/chap06/colorchooser/ColorGridPanel.java  
+  inflating: CS121-resources-master/examples/chap06/colorchooser/ColorOptionButton.java  
+   creating: CS121-resources-master/examples/chap06/converter1/
+  inflating: CS121-resources-master/examples/chap06/converter1/Converter.java  
+  inflating: CS121-resources-master/examples/chap06/converter1/MetricConverter.java  
+   creating: CS121-resources-master/examples/chap06/converter2/
+  inflating: CS121-resources-master/examples/chap06/converter2/Converter.java  
+  inflating: CS121-resources-master/examples/chap06/converter2/MetricConverter.java  
+   creating: CS121-resources-master/examples/chap06/converter3/
+  inflating: CS121-resources-master/examples/chap06/converter3/Converter.java  
+  inflating: CS121-resources-master/examples/chap06/converter3/MetricConverter.java  
+   creating: CS121-resources-master/examples/chap06/frogger/
+  inflating: CS121-resources-master/examples/chap06/frogger/Frogger.java  
+  inflating: CS121-resources-master/examples/chap06/frogger/FroggerAvatar.java  
+  inflating: CS121-resources-master/examples/chap06/frogger/FroggerDisplayPanel.java  
+  inflating: CS121-resources-master/examples/chap06/frogger/FroggerPanel.java  
+  inflating: CS121-resources-master/examples/chap06/frogger/FroggerVehicle.java  
+  inflating: CS121-resources-master/examples/chap06/frogger/wilhelm.wav  
+  inflating: CS121-resources-master/examples/chap06/happyFace.gif  
+   creating: CS121-resources-master/examples/chap06/inclass/
+  inflating: CS121-resources-master/examples/chap06/inclass/ColorJList.java  
+  inflating: CS121-resources-master/examples/chap06/inclass/ColorJListPanel.java  
+  inflating: CS121-resources-master/examples/chap06/inclass/CrayonBox.java  
+ extracting: CS121-resources-master/examples/chap06/lightBulbOff.gif  
+ extracting: CS121-resources-master/examples/chap06/lightBulbOn.gif  
+   creating: CS121-resources-master/examples/chap06/misc/
+  inflating: CS121-resources-master/examples/chap06/misc/FontScaler.java  
+  inflating: CS121-resources-master/examples/chap06/misc/FontScalerPanel.java  
+  inflating: CS121-resources-master/examples/chap06/misc/GetScreenSize.java  
+  inflating: CS121-resources-master/examples/chap06/misc/MouseOdometer.java  
+  inflating: CS121-resources-master/examples/chap06/misc/MouseOdometerPanel.java  
+  inflating: CS121-resources-master/examples/chap06/misc/ScreenCapture.java  
+   creating: CS121-resources-master/examples/chap06/orderapplication/
+  inflating: CS121-resources-master/examples/chap06/orderapplication/OrderApplication.java  
+  inflating: CS121-resources-master/examples/chap06/orderapplication/OrderApplicationPanel.java  
+  inflating: CS121-resources-master/examples/chap06/play.gif  
+   creating: CS121-resources-master/examples/chap06/songs/
+  inflating: CS121-resources-master/examples/chap06/songs/classical.wav  
+  inflating: CS121-resources-master/examples/chap06/songs/eightiesJam.wav  
+  inflating: CS121-resources-master/examples/chap06/songs/hitchcock.wav  
+  inflating: CS121-resources-master/examples/chap06/songs/newAgeRythm.wav  
+  inflating: CS121-resources-master/examples/chap06/songs/westernBeat.wav  
+   creating: CS121-resources-master/examples/chap06/spirograph/
+  inflating: CS121-resources-master/examples/chap06/spirograph/Circle.java  
+  inflating: CS121-resources-master/examples/chap06/spirograph/DrawingCircle.java  
+  inflating: CS121-resources-master/examples/chap06/spirograph/Spirograph.java  
+  inflating: CS121-resources-master/examples/chap06/spirograph/SpirographDrawPanel.java  
+  inflating: CS121-resources-master/examples/chap06/stop.gif  
+   creating: CS121-resources-master/examples/chap06/textedit/
+  inflating: CS121-resources-master/examples/chap06/textedit/SimpleTextEditor.java  
+   creating: CS121-resources-master/examples/chap06/textedit/advanced/
+  inflating: CS121-resources-master/examples/chap06/textedit/advanced/ColorPlay.java  
+  inflating: CS121-resources-master/examples/chap06/textedit/advanced/SimpleTextEditor.java  
+   creating: CS121-resources-master/examples/chap07/
+  inflating: CS121-resources-master/examples/chap07/.classpath  
+  inflating: CS121-resources-master/examples/chap07/.project  
+  inflating: CS121-resources-master/examples/chap07/ArrayExample.java  
+  inflating: CS121-resources-master/examples/chap07/ArrayListExample.java  
+  inflating: CS121-resources-master/examples/chap07/ArrayPassing.java  
+  inflating: CS121-resources-master/examples/chap07/ArraySwap.java  
+  inflating: CS121-resources-master/examples/chap07/BasicArray.java  
+  inflating: CS121-resources-master/examples/chap07/Book.java  
+  inflating: CS121-resources-master/examples/chap07/CD.java  
+  inflating: CS121-resources-master/examples/chap07/CDCollection.java  
+  inflating: CS121-resources-master/examples/chap07/Card.java  
+  inflating: CS121-resources-master/examples/chap07/CheckerBoard.java  
+  inflating: CS121-resources-master/examples/chap07/CmdLineArgs.java  
+  inflating: CS121-resources-master/examples/chap07/CommandLineEcho.java  
+  inflating: CS121-resources-master/examples/chap07/CommandLineValidation.java  
+  inflating: CS121-resources-master/examples/chap07/DVD.java  
+  inflating: CS121-resources-master/examples/chap07/DVDCollection.java  
+  inflating: CS121-resources-master/examples/chap07/Family.java  
+  inflating: CS121-resources-master/examples/chap07/FunkyArrays.java  
+  inflating: CS121-resources-master/examples/chap07/Grade.java  
+  inflating: CS121-resources-master/examples/chap07/GradeRange.java  
+  inflating: CS121-resources-master/examples/chap07/GrowingArray.java  
+  inflating: CS121-resources-master/examples/chap07/LargeArray.java  
+  inflating: CS121-resources-master/examples/chap07/LetterCount.java  
+  inflating: CS121-resources-master/examples/chap07/Library.java  
+  inflating: CS121-resources-master/examples/chap07/LibraryMenu.java  
+  inflating: CS121-resources-master/examples/chap07/Makefile  
+  inflating: CS121-resources-master/examples/chap07/Movies.java  
+  inflating: CS121-resources-master/examples/chap07/NameTag.java  
+  inflating: CS121-resources-master/examples/chap07/Primes.java  
+  inflating: CS121-resources-master/examples/chap07/RandomAverage.java  
+  inflating: CS121-resources-master/examples/chap07/Rank.java  
+  inflating: CS121-resources-master/examples/chap07/ReverseOrder.java  
+  inflating: CS121-resources-master/examples/chap07/SawtoothSunrise.java  
+  inflating: CS121-resources-master/examples/chap07/SawtoothSunrisePanel.java  
+  inflating: CS121-resources-master/examples/chap07/SodaSurvey.java  
+  inflating: CS121-resources-master/examples/chap07/Stats.java  
+  inflating: CS121-resources-master/examples/chap07/Suit.java  
+  inflating: CS121-resources-master/examples/chap07/TextFileTokenizer.java  
+  inflating: CS121-resources-master/examples/chap07/Tunes.java  
+  inflating: CS121-resources-master/examples/chap07/TwoDArray.java  
+  inflating: CS121-resources-master/examples/chap07/TwoDimArrays.java  
+  inflating: CS121-resources-master/examples/chap07/VariableParameters.java  
+   creating: CS121-resources-master/examples/chap07/images/
+  inflating: CS121-resources-master/examples/chap07/images/00.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/01.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/02.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/03.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/04.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/05.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/06.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/07.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/08.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/09.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/10.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/11.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/12.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/13.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/14.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/15.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/16.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/17.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/18.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/19.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/20.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/21.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/22.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/23.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/24.jpg  
+  inflating: CS121-resources-master/examples/chap07/images/25.jpg  
+   creating: CS121-resources-master/examples/chap07/inclass/
+  inflating: CS121-resources-master/examples/chap07/inclass/Alphabet.java  
+  inflating: CS121-resources-master/examples/chap07/parsing1.txt  
+  inflating: CS121-resources-master/examples/chap07/parsing2.txt  
+  inflating: CS121-resources-master/examples/chap07/test.sh  
+  inflating: CS121-resources-master/examples/chap07/testAverage.sh  
+  inflating: CS121-resources-master/examples/chap07/wordlist.txt  
+   creating: CS121-resources-master/examples/extras/
+   creating: CS121-resources-master/examples/extras/sorting/
+  inflating: CS121-resources-master/examples/extras/sorting/Product.java  
+  inflating: CS121-resources-master/examples/extras/sorting/ShoppingCart.java  
+   creating: CS121-resources-master/examples/file-io/
+  inflating: CS121-resources-master/examples/file-io/.classpath  
+  inflating: CS121-resources-master/examples/file-io/.project  
+  inflating: CS121-resources-master/examples/file-io/Bill-of-Rights-new.txt  
+  inflating: CS121-resources-master/examples/file-io/Bill-of-Rights.txt  
+  inflating: CS121-resources-master/examples/file-io/FileDiff.java  
+  inflating: CS121-resources-master/examples/file-io/FileEcho.java  
+  inflating: CS121-resources-master/examples/file-io/FileReading.java  
+  inflating: CS121-resources-master/examples/file-io/FileTest.java  
+  inflating: CS121-resources-master/examples/file-io/FileWriting.java  
+  inflating: CS121-resources-master/examples/file-io/ListFileWords.java  
+  inflating: CS121-resources-master/examples/file-io/Makefile  
+  inflating: CS121-resources-master/examples/file-io/URLDissector.java  
+  inflating: CS121-resources-master/examples/file-io/UseScannerDelimiter.java  
+  inflating: CS121-resources-master/examples/file-io/UseStringTokenizer.java  
+ extracting: CS121-resources-master/examples/file-io/grid1.dat  
+ extracting: CS121-resources-master/examples/file-io/grid2.dat  
+ extracting: CS121-resources-master/examples/file-io/grid3.dat  
+  inflating: CS121-resources-master/examples/file-io/input.txt  
+  inflating: CS121-resources-master/examples/file-io/parsing1.txt  
+  inflating: CS121-resources-master/examples/file-io/parsing2.txt  
+  inflating: CS121-resources-master/examples/file-io/websites.txt  
+ extracting: CS121-resources-master/examples/file-io/words.txt  
+   creating: CS121-resources-master/examples/graphics/
+  inflating: CS121-resources-master/examples/graphics/.classpath  
+  inflating: CS121-resources-master/examples/graphics/.project  
+  inflating: CS121-resources-master/examples/graphics/AnimatedDigitalClock.java  
+  inflating: CS121-resources-master/examples/graphics/BasicShapes.java  
+  inflating: CS121-resources-master/examples/graphics/BasicShapesScalable.java  
+  inflating: CS121-resources-master/examples/graphics/BlankCanvas.java  
+  inflating: CS121-resources-master/examples/graphics/CenterText.java  
+  inflating: CS121-resources-master/examples/graphics/DrawPieChart.java  
+  inflating: CS121-resources-master/examples/graphics/DrawPieChartScalable.java  
+  inflating: CS121-resources-master/examples/graphics/GraphicsCheatSheet.pdf  
+  inflating: CS121-resources-master/examples/graphics/ImageAvatar.java  
+  inflating: CS121-resources-master/examples/graphics/Makefile  
+  inflating: CS121-resources-master/examples/graphics/Pig.java  
+  inflating: CS121-resources-master/examples/graphics/Shapes.java  
+  inflating: CS121-resources-master/examples/graphics/SimpleAnimation.java  
+  inflating: CS121-resources-master/examples/graphics/SimpleAnimationScaled.java  
+  inflating: CS121-resources-master/examples/graphics/Snowman.java  
+  inflating: CS121-resources-master/examples/graphics/SnowmanBigger.java  
+  inflating: CS121-resources-master/examples/graphics/Strokes.java  
+  inflating: CS121-resources-master/examples/graphics/Triangle.java  
+ extracting: CS121-resources-master/examples/graphics/amitAvatar.png  
+ extracting: CS121-resources-master/examples/graphics/myAvatar.png  
+   creating: CS121-resources-master/exams/
+  inflating: CS121-resources-master/exams/sample-final.pdf  
+   creating: CS121-resources-master/projects/
+  inflating: CS121-resources-master/projects/README_EXAMPLE.md  
+  inflating: CS121-resources-master/projects/README_TEMPLATE.md  
+   creating: CS121-resources-master/projects/p1/
+  inflating: CS121-resources-master/projects/p1/README.md  
+  inflating: CS121-resources-master/projects/p1/TrafficAnimation.java  
+   creating: CS121-resources-master/projects/p2/
+  inflating: CS121-resources-master/projects/p2/ParkingSpot.java  
+   creating: CS121-resources-master/projects/p2/docs/
+  inflating: CS121-resources-master/projects/p2/docs/ParkingSpot.html  
+  inflating: CS121-resources-master/projects/p2/docs/allclasses-frame.html  
+  inflating: CS121-resources-master/projects/p2/docs/allclasses-noframe.html  
+   creating: CS121-resources-master/projects/p2/docs/class-use/
+  inflating: CS121-resources-master/projects/p2/docs/class-use/ParkingSpot.html  
+  inflating: CS121-resources-master/projects/p2/docs/constant-values.html  
+  inflating: CS121-resources-master/projects/p2/docs/deprecated-list.html  
+  inflating: CS121-resources-master/projects/p2/docs/help-doc.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-all.html  
+   creating: CS121-resources-master/projects/p2/docs/index-files/
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-1.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-2.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-3.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-4.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-5.html  
+  inflating: CS121-resources-master/projects/p2/docs/index-files/index-6.html  
+  inflating: CS121-resources-master/projects/p2/docs/index.html  
+  inflating: CS121-resources-master/projects/p2/docs/overview-tree.html  
+  inflating: CS121-resources-master/projects/p2/docs/package-frame.html  
+ extracting: CS121-resources-master/projects/p2/docs/package-list  
+  inflating: CS121-resources-master/projects/p2/docs/package-summary.html  
+  inflating: CS121-resources-master/projects/p2/docs/package-tree.html  
+  inflating: CS121-resources-master/projects/p2/docs/package-use.html  
+   creating: CS121-resources-master/projects/p2/docs/resources/
+ extracting: CS121-resources-master/projects/p2/docs/resources/background.gif  
+ extracting: CS121-resources-master/projects/p2/docs/resources/inherit.gif  
+  inflating: CS121-resources-master/projects/p2/docs/resources/tab.gif  
+  inflating: CS121-resources-master/projects/p2/docs/resources/titlebar.gif  
+  inflating: CS121-resources-master/projects/p2/docs/resources/titlebar_end.gif  
+  inflating: CS121-resources-master/projects/p2/docs/script.js  
+  inflating: CS121-resources-master/projects/p2/docs/stylesheet.css  
+[smeyers@localhost tmp]$ cd master
+bash: cd: master: No such file or directory
+[smeyers@localhost tmp]$ ls
+CS121-resources-master  cs-hu153-words-dataset.tgz  master.zip  words
+[smeyers@localhost tmp]$ cd CS121-resources-master
+[smeyers@localhost CS121-resources-master]$ ls
+etext  examples  exams  projects  README.md
+[smeyers@localhost CS121-resources-master]$ cd examples
+[smeyers@localhost examples]$ du -h chap07
+512K    chap07/images
+4.0K    chap07/inclass
+2.7M    chap07
+[smeyers@localhost examples]$ zip chap07
+
+zip error: Nothing to do! (chap07.zip)
+[smeyers@localhost examples]$ man zip
+[smeyers@localhost examples]$ zip chap07.zip
+
+zip error: Nothing to do! (chap07.zip)
+[smeyers@localhost examples]$ search
+bash: search: command not found
+[smeyers@localhost examples]$ ls
+chap01  chap03  chap05  chap07  file-io   Makefile   UML
+chap02  chap04  chap06  extras  graphics  README.md
+[smeyers@localhost examples]$ du -h chap07.zip
+du: cannot access ‘chap07.zip’: No such file or directory
+[smeyers@localhost examples]$ zip chap07 chap07.zip
+        zip warning: name not matched: chap07.zip
+
+zip error: Nothing to do! (chap07.zip)
+[smeyers@localhost examples]$ zip -r chap07.zip chap07
+  adding: chap07/ (stored 0%)
+  adding: chap07/.classpath (deflated 37%)
+  adding: chap07/.project (deflated 49%)
+  adding: chap07/ArrayExample.java (deflated 62%)
+  adding: chap07/ArrayListExample.java (deflated 57%)
+  adding: chap07/ArrayPassing.java (deflated 53%)
+  adding: chap07/ArraySwap.java (deflated 62%)
+  adding: chap07/BasicArray.java (deflated 47%)
+  adding: chap07/Book.java (deflated 67%)
+  adding: chap07/CD.java (deflated 55%)
+  adding: chap07/CDCollection.java (deflated 64%)
+  adding: chap07/Card.java (deflated 52%)
+  adding: chap07/CheckerBoard.java (deflated 58%)
+  adding: chap07/CmdLineArgs.java (deflated 53%)
+  adding: chap07/CommandLineEcho.java (deflated 38%)
+  adding: chap07/CommandLineValidation.java (deflated 63%)
+  adding: chap07/DVD.java (deflated 53%)
+  adding: chap07/DVDCollection.java (deflated 58%)
+  adding: chap07/Family.java (deflated 68%)
+  adding: chap07/FunkyArrays.java (deflated 71%)
+  adding: chap07/Grade.java (deflated 67%)
+  adding: chap07/GradeRange.java (deflated 54%)
+  adding: chap07/GrowingArray.java (deflated 61%)
+  adding: chap07/LargeArray.java (deflated 53%)
+  adding: chap07/LetterCount.java (deflated 55%)
+  adding: chap07/Library.java (deflated 64%)
+  adding: chap07/LibraryMenu.java (deflated 71%)
+  adding: chap07/Makefile (deflated 53%)
+  adding: chap07/Movies.java (deflated 48%)
+  adding: chap07/NameTag.java (deflated 43%)
+  adding: chap07/Primes.java (deflated 44%)
+  adding: chap07/RandomAverage.java (deflated 53%)
+  adding: chap07/Rank.java (deflated 12%)
+  adding: chap07/ReverseOrder.java (deflated 54%)
+  adding: chap07/SawtoothSunrise.java (deflated 35%)
+  adding: chap07/SawtoothSunrisePanel.java (deflated 54%)
+  adding: chap07/SodaSurvey.java (deflated 57%)
+  adding: chap07/Stats.java (deflated 51%)
+  adding: chap07/Suit.java (deflated 12%)
+  adding: chap07/TextFileTokenizer.java (deflated 48%)
+  adding: chap07/Tunes.java (deflated 48%)
+  adding: chap07/TwoDArray.java (deflated 51%)
+  adding: chap07/TwoDimArrays.java (deflated 65%)
+  adding: chap07/VariableParameters.java (deflated 63%)
+  adding: chap07/images/ (stored 0%)
+  adding: chap07/images/00.jpg (deflated 1%)
+  adding: chap07/images/01.jpg (deflated 1%)
+  adding: chap07/images/02.jpg (deflated 1%)
+  adding: chap07/images/03.jpg (deflated 1%)
+  adding: chap07/images/04.jpg (deflated 1%)
+  adding: chap07/images/05.jpg (deflated 1%)
+  adding: chap07/images/06.jpg (deflated 1%)
+  adding: chap07/images/07.jpg (deflated 1%)
+  adding: chap07/images/08.jpg (deflated 1%)
+  adding: chap07/images/09.jpg (deflated 1%)
+  adding: chap07/images/10.jpg (deflated 1%)
+  adding: chap07/images/11.jpg (deflated 1%)
+  adding: chap07/images/12.jpg (deflated 1%)
+  adding: chap07/images/13.jpg (deflated 1%)
+  adding: chap07/images/14.jpg (deflated 1%)
+  adding: chap07/images/15.jpg (deflated 1%)
+  adding: chap07/images/16.jpg (deflated 1%)
+  adding: chap07/images/17.jpg (deflated 1%)
+  adding: chap07/images/18.jpg (deflated 1%)
+  adding: chap07/images/19.jpg (deflated 1%)
+  adding: chap07/images/20.jpg (deflated 1%)
+  adding: chap07/images/21.jpg (deflated 1%)
+  adding: chap07/images/22.jpg (deflated 1%)
+  adding: chap07/images/23.jpg (deflated 1%)
+  adding: chap07/images/24.jpg (deflated 1%)
+  adding: chap07/images/25.jpg (deflated 1%)
+  adding: chap07/inclass/ (stored 0%)
+  adding: chap07/inclass/Alphabet.java (deflated 58%)
+  adding: chap07/parsing1.txt (deflated 30%)
+  adding: chap07/parsing2.txt (deflated 34%)
+  adding: chap07/test.sh (deflated 75%)
+  adding: chap07/testAverage.sh (deflated 57%)
+  adding: chap07/wordlist.txt (deflated 68%)
+[smeyers@localhost examples]$ tar cvjf chap07.tar.bz2 chap07
+chap07/
+chap07/.classpath
+chap07/.project
+chap07/ArrayExample.java
+chap07/ArrayListExample.java
+chap07/ArrayPassing.java
+chap07/ArraySwap.java
+chap07/BasicArray.java
+chap07/Book.java
+chap07/CD.java
+chap07/CDCollection.java
+chap07/Card.java
+chap07/CheckerBoard.java
+chap07/CmdLineArgs.java
+chap07/CommandLineEcho.java
+chap07/CommandLineValidation.java
+chap07/DVD.java
+chap07/DVDCollection.java
+chap07/Family.java
+chap07/FunkyArrays.java
+chap07/Grade.java
+chap07/GradeRange.java
+chap07/GrowingArray.java
+chap07/LargeArray.java
+chap07/LetterCount.java
+chap07/Library.java
+chap07/LibraryMenu.java
+chap07/Makefile
+chap07/Movies.java
+chap07/NameTag.java
+chap07/Primes.java
+chap07/RandomAverage.java
+chap07/Rank.java
+chap07/ReverseOrder.java
+chap07/SawtoothSunrise.java
+chap07/SawtoothSunrisePanel.java
+chap07/SodaSurvey.java
+chap07/Stats.java
+chap07/Suit.java
+chap07/TextFileTokenizer.java
+chap07/Tunes.java
+chap07/TwoDArray.java
+chap07/TwoDimArrays.java
+chap07/VariableParameters.java
+chap07/images/
+chap07/images/00.jpg
+chap07/images/01.jpg
+chap07/images/02.jpg
+chap07/images/03.jpg
+chap07/images/04.jpg
+chap07/images/05.jpg
+chap07/images/06.jpg
+chap07/images/07.jpg
+chap07/images/08.jpg
+chap07/images/09.jpg
+chap07/images/10.jpg
+chap07/images/11.jpg
+chap07/images/12.jpg
+chap07/images/13.jpg
+chap07/images/14.jpg
+chap07/images/15.jpg
+chap07/images/16.jpg
+chap07/images/17.jpg
+chap07/images/18.jpg
+chap07/images/19.jpg
+chap07/images/20.jpg
+chap07/images/21.jpg
+chap07/images/22.jpg
+chap07/images/23.jpg
+chap07/images/24.jpg
+chap07/images/25.jpg
+chap07/inclass/
+chap07/inclass/Alphabet.java
+chap07/parsing1.txt
+chap07/parsing2.txt
+chap07/test.sh
+chap07/testAverage.sh
+chap07/wordlist.txt
+[smeyers@localhost examples]$ du -h chap07
+512K    chap07/images
+4.0K    chap07/inclass
+2.7M    chap07
+[smeyers@localhost examples]$ du -h chap07.zip
+1.1M    chap07.zip
+[smeyers@localhost examples]$ du -h chap07.tar.bz2
+984K    chap07.tar.bz2
+[smeyers@localhost examples]$ tar czvf chap07.tgz chap07
+chap07/
+chap07/.classpath
+chap07/.project
+chap07/ArrayExample.java
+chap07/ArrayListExample.java
+chap07/ArrayPassing.java
+chap07/ArraySwap.java
+chap07/BasicArray.java
+chap07/Book.java
+chap07/CD.java
+chap07/CDCollection.java
+chap07/Card.java
+chap07/CheckerBoard.java
+chap07/CmdLineArgs.java
+chap07/CommandLineEcho.java
+chap07/CommandLineValidation.java
+chap07/DVD.java
+chap07/DVDCollection.java
+chap07/Family.java
+chap07/FunkyArrays.java
+chap07/Grade.java
+chap07/GradeRange.java
+chap07/GrowingArray.java
+chap07/LargeArray.java
+chap07/LetterCount.java
+chap07/Library.java
+chap07/LibraryMenu.java
+chap07/Makefile
+chap07/Movies.java
+chap07/NameTag.java
+chap07/Primes.java
+chap07/RandomAverage.java
+chap07/Rank.java
+chap07/ReverseOrder.java
+chap07/SawtoothSunrise.java
+chap07/SawtoothSunrisePanel.java
+chap07/SodaSurvey.java
+chap07/Stats.java
+chap07/Suit.java
+chap07/TextFileTokenizer.java
+chap07/Tunes.java
+chap07/TwoDArray.java
+chap07/TwoDimArrays.java
+chap07/VariableParameters.java
+chap07/images/
+chap07/images/00.jpg
+chap07/images/01.jpg
+chap07/images/02.jpg
+chap07/images/03.jpg
+chap07/images/04.jpg
+chap07/images/05.jpg
+chap07/images/06.jpg
+chap07/images/07.jpg
+chap07/images/08.jpg
+chap07/images/09.jpg
+chap07/images/10.jpg
+chap07/images/11.jpg
+chap07/images/12.jpg
+chap07/images/13.jpg
+chap07/images/14.jpg
+chap07/images/15.jpg
+chap07/images/16.jpg
+chap07/images/17.jpg
+chap07/images/18.jpg
+chap07/images/19.jpg
+chap07/images/20.jpg
+chap07/images/21.jpg
+chap07/images/22.jpg
+chap07/images/23.jpg
+chap07/images/24.jpg
+chap07/images/25.jpg
+chap07/inclass/
+chap07/inclass/Alphabet.java
+chap07/parsing1.txt
+chap07/parsing2.txt
+chap07/test.sh
+chap07/testAverage.sh
+chap07/wordlist.txt
+[smeyers@localhost examples]$ du -h chap07.tgz
+1.1M    chap07.tgz
+[smeyers@localhost examples]$ scp chap07.tgz stevenmeyers946@onyx.boisestate.edu
+[smeyers@localhost examples]$ scp chap07.tgz stevenmeyers946@onyx.boisestate.edu
+[smeyers@localhost examples]$ ssh stevenmeyers946@onyx.boisestate.edu
+stevenmeyers946@onyx.boisestate.edu's password: 
+Last login: Thu Sep 12 11:26:52 2019 from 76.10.48.231
+/usr/bin/id: cannot find name for group ID 456024
+[stevenmeyers946@onyx ~]$ ls
+cpu-details.txt  cs-hu153   Downloads          Music     Templates
+cs121            Desktop    eclipse-workspace  Pictures  Videos
+cs221            Documents  git                Public
+[stevenmeyers946@onyx ~]$ logout
+Connection to onyx.boisestate.edu closed.
+[smeyers@localhost examples]$ scp chap07.tgz stevenmeyers946@onyx.boisestate.edu:/home/downloads
+stevenmeyers946@onyx.boisestate.edu's password: 
+/usr/bin/id: cannot find name for group ID 456024
+scp: /home/downloads: Permission denied
+[smeyers@localhost examples]$ scp chap07.tgz stevenmeyers946@onyx.boisestate.edu:~
+stevenmeyers946@onyx.boisestate.edu's password: 
+/usr/bin/id: cannot find name for group ID 456024
+chap07.tgz                                    100% 1052KB   1.3MB/s   00:00    
+[smeyers@localhost examples]$ ssh stevenmeyers946@onyx.boisestate.edustevenmeyers946@onyx.boisestate.edu's password: 
+Last login: Mon Sep 16 19:43:10 2019 from 76.10.48.231
+/usr/bin/id: cannot find name for group ID 456024
+[stevenmeyers946@onyx ~]$ ls
+chap07.tgz       cs221     Documents          git       Public
+cpu-details.txt  cs-hu153  Downloads          Music     Templates
+cs121            Desktop   eclipse-workspace  Pictures  Videos
+[stevenmeyers946@onyx ~]$ mkdir tmp
+[stevenmeyers946@onyx ~]$ ls
+chap07.tgz       cs221     Documents          git       Public     Videos
+cpu-details.txt  cs-hu153  Downloads          Music     Templates
+cs121            Desktop   eclipse-workspace  Pictures  tmp
+[stevenmeyers946@onyx ~]$ tar chap07.tar -C /tmp
+tar: Options `-[0-7][lmh]' not supported by *this* tar
+Try `tar --help' or `tar --usage' for more information.
+[stevenmeyers946@onyx ~]$ tar -xvf chap07.tar -C /tmp
+tar: chap07.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+[stevenmeyers946@onyx ~]$ tar chap07.tgz -C /tmp
+tar: Options `-[0-7][lmh]' not supported by *this* tar
+Try `tar --help' or `tar --usage' for more information.
+[stevenmeyers946@onyx ~]$ tar chap07.tgz tmp
+tar: Options `-[0-7][lmh]' not supported by *this* tar
+Try `tar --help' or `tar --usage' for more information.
+[stevenmeyers946@onyx ~]$ tar -xvf chap07.tgz -C ~/tmp
+chap07/
+chap07/.classpath
+chap07/.project
+chap07/ArrayExample.java
+chap07/ArrayListExample.java
+chap07/ArrayPassing.java
+chap07/ArraySwap.java
+chap07/BasicArray.java
+chap07/Book.java
+chap07/CD.java
+chap07/CDCollection.java
+chap07/Card.java
+chap07/CheckerBoard.java
+chap07/CmdLineArgs.java
+chap07/CommandLineEcho.java
+chap07/CommandLineValidation.java
+chap07/DVD.java
+chap07/DVDCollection.java
+chap07/Family.java
+chap07/FunkyArrays.java
+chap07/Grade.java
+chap07/GradeRange.java
+chap07/GrowingArray.java
+chap07/LargeArray.java
+chap07/LetterCount.java
+chap07/Library.java
+chap07/LibraryMenu.java
+chap07/Makefile
+chap07/Movies.java
+chap07/NameTag.java
+chap07/Primes.java
+chap07/RandomAverage.java
+chap07/Rank.java
+chap07/ReverseOrder.java
+chap07/SawtoothSunrise.java
+chap07/SawtoothSunrisePanel.java
+chap07/SodaSurvey.java
+chap07/Stats.java
+chap07/Suit.java
+chap07/TextFileTokenizer.java
+chap07/Tunes.java
+chap07/TwoDArray.java
+chap07/TwoDimArrays.java
+chap07/VariableParameters.java
+chap07/images/
+chap07/images/00.jpg
+chap07/images/01.jpg
+chap07/images/02.jpg
+chap07/images/03.jpg
+chap07/images/04.jpg
+chap07/images/05.jpg
+chap07/images/06.jpg
+chap07/images/07.jpg
+chap07/images/08.jpg
+chap07/images/09.jpg
+chap07/images/10.jpg
+chap07/images/11.jpg
+chap07/images/12.jpg
+chap07/images/13.jpg
+chap07/images/14.jpg
+chap07/images/15.jpg
+chap07/images/16.jpg
+chap07/images/17.jpg
+chap07/images/18.jpg
+chap07/images/19.jpg
+chap07/images/20.jpg
+chap07/images/21.jpg
+chap07/images/22.jpg
+chap07/images/23.jpg
+chap07/images/24.jpg
+chap07/images/25.jpg
+chap07/inclass/
+chap07/inclass/Alphabet.java
+chap07/parsing1.txt
+chap07/parsing2.txt
+chap07/test.sh
+chap07/testAverage.sh
+chap07/wordlist.txt
+[stevenmeyers946@onyx ~]$ ls
+chap07.tgz       cs221     Documents          git       Public     Videos
+cpu-details.txt  cs-hu153  Downloads          Music     Templates
+cs121            Desktop   eclipse-workspace  Pictures  tmp
+[stevenmeyers946@onyx ~]$ exit
+logout
+Connection to onyx.boisestate.edu closed.
+[smeyers@localhost examples]$ cd ~
+[smeyers@localhost ~]$ rmdir tmp
+rmdir: failed to remove ‘tmp’: Directory not empty
+[smeyers@localhost ~]$ rmdir -R tmp
+rmdir: invalid option -- 'R'
+Try 'rmdir --help' for more information.
+[smeyers@localhost ~]$ rmdir -A tmp
+rmdir: invalid option -- 'A'
+Try 'rmdir --help' for more information.
+[smeyers@localhost ~]$ rm -r tmp
+rm: remove write-protected regular file ‘tmp/words/h-m/k.txt’? y
+rm: remove write-protected regular file ‘tmp/words/h-m/i.txt’? y
+rm: remove write-protected regular file ‘tmp/words/h-m/j.txt’? y
+rm: remove write-protected regular file ‘tmp/words/h-m/l.txt’? y
+rm: remove write-protected regular file ‘tmp/words/h-m/m.txt’? y
+rm: remove write-protected regular file ‘tmp/words/h-m/h.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/d.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/e.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/f.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/c.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/a.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/b.txt’? y
+rm: remove write-protected regular file ‘tmp/words/a-g/g.txt’? y
+rm: remove write-protected regular file ‘tmp/words/n-t/n.txt’? y
+rm: remove write-protected regular file ‘tmp/words/n-t/p.txt’? 
+rm: remove write-protected regular file ‘tmp/words/n-t/q.txt’? y 
+rm: remove write-protected regular file ‘tmp/words/n-t/s.txt’? y
+rm: remove write-protected regular file ‘tmp/words/n-t/t.txt’? y
+rm: remove write-protected regular file ‘tmp/words/n-t/r.txt’? y
+rm: remove write-protected regular file ‘tmp/words/n-t/o.txt’? y
+rm: cannot remove ‘tmp/words/n-t’: Directory not empty
+rm: remove write-protected regular file ‘tmp/words/u-z/y.txt’? y
+rm: remove write-protected regular file ‘tmp/words/u-z/v.txt’? y
+rm: remove write-protected regular file ‘tmp/words/u-z/w.txt’? y
+rm: remove write-protected regular file ‘tmp/words/u-z/x.txt’? y
+rm: remove write-protected regular file ‘tmp/words/u-z/z.txt’? y
+rm: remove write-protected regular file ‘tmp/words/u-z/u.txt’? y
+[smeyers@localhost ~]$ rm -rf tmp
+[smeyers@localhost ~]$ ls
+Desktop    Downloads  eclipse-workspace  Pictures  Templates
+Documents  eclipse    Music              Public    Videos
+[smeyers@localhost ~]$ 

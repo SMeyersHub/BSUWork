@@ -1,0 +1,263 @@
+[smeyers@localhost ~]$ echo "Scenario 2 - Linux File System Lockdown"
+Scenario 2 - Linux File System Lockdown
+[smeyers@localhost ~]$ mkdir tmp
+[smeyers@localhost ~]$ cd tmp
+[smeyers@localhost tmp]$ wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+--2019-09-16 20:26:51--  https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+Resolving github.com (github.com)... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/BoiseState/CS-HU153-resources/master/activities/cs-hu153-words-dataset.tgz [following]
+--2019-09-16 20:26:51--  https://raw.githubusercontent.com/BoiseState/CS-HU153-resources/master/activities/cs-hu153-words-dataset.tgz
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.68.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.68.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1479171 (1.4M) [application/octet-stream]
+Saving to: ‘cs-hu153-words-dataset.tgz’
+
+100%[======================================>] 1,479,171   7.76MB/s   in 0.2s   
+
+2019-09-16 20:26:52 (7.76 MB/s) - ‘cs-hu153-words-dataset.tgz’ saved [1479171/1479171]
+
+[smeyers@localhost tmp]$ tar xvzf cs-hu153-words-dataset.tgz
+words/
+words/h-m/
+words/h-m/k.txt
+words/h-m/i.txt
+words/h-m/j.txt
+words/h-m/l.txt
+words/h-m/m.txt
+words/h-m/h.txt
+words/a-g/
+words/a-g/d.txt
+words/a-g/e.txt
+words/a-g/f.txt                                                                 
+words/a-g/c.txt                                                                 
+words/a-g/a.txt                                                                 
+words/a-g/b.txt                                                                 
+words/a-g/g.txt                                                                 
+words/n-t/                                                                      
+words/n-t/n.txt                                                                 
+words/n-t/p.txt                                                                 
+words/n-t/q.txt                                                                 
+words/n-t/s.txt                                                                 
+words/n-t/t.txt
+words/n-t/r.txt
+words/n-t/o.txt
+words/u-z/
+words/u-z/y.txt
+words/u-z/v.txt
+words/u-z/w.txt
+words/u-z/x.txt
+words/u-z/z.txt
+words/u-z/u.txt
+[smeyers@localhost tmp]$ groupadd developers
+bash: /usr/sbin/groupadd: Permission denied
+[smeyers@localhost tmp]$ sudo groupadd developers
+[sudo] password for smeyers: 
+groupadd: group 'developers' already exists
+[smeyers@localhost tmp]$ ls -lR
+.:
+total 1448
+-rw-rw-r-- 1 smeyers smeyers 1479171 Sep 16 20:26 cs-hu153-words-dataset.tgz
+drwx------ 6 smeyers smeyers      50 Oct 27  2017 words
+
+./words:
+total 0
+drwx------ 2 smeyers smeyers 97 Feb  7  2018 a-g
+drwx------ 2 smeyers smeyers 84 Feb  7  2018 h-m
+drwx------ 2 smeyers smeyers 97 Feb  7  2018 n-t
+drwx------ 2 smeyers smeyers 84 Oct 27  2017 u-z
+
+./words/a-g:
+total 1656
+-r-------- 1 smeyers smeyers 322688 Oct 25  2017 a.txt
+-r-------- 1 smeyers smeyers 237545 Oct 25  2017 b.txt
+-r-------- 1 smeyers smeyers 413770 Oct 25  2017 c.txt
+-r-------- 1 smeyers smeyers 234800 Oct 25  2017 d.txt
+-r-------- 1 smeyers smeyers 175314 Oct 25  2017 e.txt
+-r-------- 1 smeyers smeyers 157901 Oct 25  2017 f.txt
+-r-------- 1 smeyers smeyers 142236 Oct 25  2017 g.txt
+
+./words/h-m:
+total 860
+-r-------- 1 smeyers smeyers 202282 Oct 25  2017 h.txt
+-r-------- 1 smeyers smeyers 171212 Oct 25  2017 i.txt
+-r-------- 1 smeyers smeyers  37540 Oct 25  2017 j.txt
+-r-------- 1 smeyers smeyers  53723 Oct 25  2017 k.txt
+-r-------- 1 smeyers smeyers 138301 Oct 25  2017 l.txt
+-r-------- 1 smeyers smeyers 263325 Oct 25  2017 m.txt
+
+./words/n-t:
+total 1860
+-r-------- 1 smeyers smeyers 193750 Oct 25  2017 n.txt
+-r-------- 1 smeyers smeyers 162168 Oct 25  2017 o.txt
+-r-------- 1 smeyers smeyers 465496 Oct 25  2017 p.txt
+-r-------- 1 smeyers smeyers  39584 Oct 25  2017 q.txt
+-r-------- 1 smeyers smeyers 218137 Oct 25  2017 r.txt
+-r-------- 1 smeyers smeyers 548495 Oct 25  2017 s.txt
+-r-------- 1 smeyers smeyers 265665 Oct 25  2017 t.txt
+
+./words/u-z:
+total 504
+-r-------- 1 smeyers smeyers 277747 Oct 25  2017 u.txt
+-r-------- 1 smeyers smeyers  68067 Oct 25  2017 v.txt
+-r-------- 1 smeyers smeyers 121814 Oct 25  2017 w.txt
+-r-------- 1 smeyers smeyers   5906 Oct 25  2017 x.txt
+-r-------- 1 smeyers smeyers  15250 Oct 25  2017 y.txt
+-r-------- 1 smeyers smeyers  16818 Oct 25  2017 z.txt
+[smeyers@localhost tmp]$ chmod 754 words/*
+[smeyers@localhost tmp]$ chmod 744 words/*/*.txt
+[smeyers@localhost tmp]$ ls -lR
+.:
+total 1448
+-rw-rw-r-- 1 smeyers smeyers 1479171 Sep 16 20:26 cs-hu153-words-dataset.tgz
+drwx------ 6 smeyers smeyers      50 Oct 27  2017 words
+
+./words:
+total 0
+drwxr-xr-- 2 smeyers smeyers 97 Feb  7  2018 a-g
+drwxr-xr-- 2 smeyers smeyers 84 Feb  7  2018 h-m
+drwxr-xr-- 2 smeyers smeyers 97 Feb  7  2018 n-t
+drwxr-xr-- 2 smeyers smeyers 84 Oct 27  2017 u-z
+
+./words/a-g:
+total 1656
+-rwxr--r-- 1 smeyers smeyers 322688 Oct 25  2017 a.txt
+-rwxr--r-- 1 smeyers smeyers 237545 Oct 25  2017 b.txt
+-rwxr--r-- 1 smeyers smeyers 413770 Oct 25  2017 c.txt
+-rwxr--r-- 1 smeyers smeyers 234800 Oct 25  2017 d.txt
+-rwxr--r-- 1 smeyers smeyers 175314 Oct 25  2017 e.txt
+-rwxr--r-- 1 smeyers smeyers 157901 Oct 25  2017 f.txt
+-rwxr--r-- 1 smeyers smeyers 142236 Oct 25  2017 g.txt
+
+./words/h-m:
+total 860
+-rwxr--r-- 1 smeyers smeyers 202282 Oct 25  2017 h.txt
+-rwxr--r-- 1 smeyers smeyers 171212 Oct 25  2017 i.txt
+-rwxr--r-- 1 smeyers smeyers  37540 Oct 25  2017 j.txt
+-rwxr--r-- 1 smeyers smeyers  53723 Oct 25  2017 k.txt
+-rwxr--r-- 1 smeyers smeyers 138301 Oct 25  2017 l.txt
+-rwxr--r-- 1 smeyers smeyers 263325 Oct 25  2017 m.txt
+
+./words/n-t:
+total 1860
+-rwxr--r-- 1 smeyers smeyers 193750 Oct 25  2017 n.txt
+-rwxr--r-- 1 smeyers smeyers 162168 Oct 25  2017 o.txt
+-rwxr--r-- 1 smeyers smeyers 465496 Oct 25  2017 p.txt
+-rwxr--r-- 1 smeyers smeyers  39584 Oct 25  2017 q.txt
+-rwxr--r-- 1 smeyers smeyers 218137 Oct 25  2017 r.txt
+-rwxr--r-- 1 smeyers smeyers 548495 Oct 25  2017 s.txt
+-rwxr--r-- 1 smeyers smeyers 265665 Oct 25  2017 t.txt
+
+./words/u-z:
+total 504
+-rwxr--r-- 1 smeyers smeyers 277747 Oct 25  2017 u.txt
+-rwxr--r-- 1 smeyers smeyers  68067 Oct 25  2017 v.txt
+-rwxr--r-- 1 smeyers smeyers 121814 Oct 25  2017 w.txt
+-rwxr--r-- 1 smeyers smeyers   5906 Oct 25  2017 x.txt
+-rwxr--r-- 1 smeyers smeyers  15250 Oct 25  2017 y.txt
+-rwxr--r-- 1 smeyers smeyers  16818 Oct 25  2017 z.txt
+[smeyers@localhost tmp]$ chmod 440 words/*/*.txt
+[smeyers@localhost tmp]$ ls -lR
+.:
+total 1448
+-rw-rw-r-- 1 smeyers smeyers 1479171 Sep 16 20:26 cs-hu153-words-dataset.tgz
+drwx------ 6 smeyers smeyers      50 Oct 27  2017 words
+
+./words:
+total 0
+drwxr-xr-- 2 smeyers smeyers 97 Feb  7  2018 a-g
+drwxr-xr-- 2 smeyers smeyers 84 Feb  7  2018 h-m
+drwxr-xr-- 2 smeyers smeyers 97 Feb  7  2018 n-t
+drwxr-xr-- 2 smeyers smeyers 84 Oct 27  2017 u-z
+
+./words/a-g:
+total 1656
+-r--r----- 1 smeyers smeyers 322688 Oct 25  2017 a.txt
+-r--r----- 1 smeyers smeyers 237545 Oct 25  2017 b.txt
+-r--r----- 1 smeyers smeyers 413770 Oct 25  2017 c.txt
+-r--r----- 1 smeyers smeyers 234800 Oct 25  2017 d.txt
+-r--r----- 1 smeyers smeyers 175314 Oct 25  2017 e.txt
+-r--r----- 1 smeyers smeyers 157901 Oct 25  2017 f.txt
+-r--r----- 1 smeyers smeyers 142236 Oct 25  2017 g.txt
+
+./words/h-m:
+total 860
+-r--r----- 1 smeyers smeyers 202282 Oct 25  2017 h.txt
+-r--r----- 1 smeyers smeyers 171212 Oct 25  2017 i.txt
+-r--r----- 1 smeyers smeyers  37540 Oct 25  2017 j.txt
+-r--r----- 1 smeyers smeyers  53723 Oct 25  2017 k.txt
+-r--r----- 1 smeyers smeyers 138301 Oct 25  2017 l.txt
+-r--r----- 1 smeyers smeyers 263325 Oct 25  2017 m.txt
+
+./words/n-t:
+total 1860
+-r--r----- 1 smeyers smeyers 193750 Oct 25  2017 n.txt
+-r--r----- 1 smeyers smeyers 162168 Oct 25  2017 o.txt
+-r--r----- 1 smeyers smeyers 465496 Oct 25  2017 p.txt
+-r--r----- 1 smeyers smeyers  39584 Oct 25  2017 q.txt
+-r--r----- 1 smeyers smeyers 218137 Oct 25  2017 r.txt
+-r--r----- 1 smeyers smeyers 548495 Oct 25  2017 s.txt
+-r--r----- 1 smeyers smeyers 265665 Oct 25  2017 t.txt
+
+./words/u-z:
+total 504
+-r--r----- 1 smeyers smeyers 277747 Oct 25  2017 u.txt
+-r--r----- 1 smeyers smeyers  68067 Oct 25  2017 v.txt
+-r--r----- 1 smeyers smeyers 121814 Oct 25  2017 w.txt
+-r--r----- 1 smeyers smeyers   5906 Oct 25  2017 x.txt
+-r--r----- 1 smeyers smeyers  15250 Oct 25  2017 y.txt
+-r--r----- 1 smeyers smeyers  16818 Oct 25  2017 z.txt
+[smeyers@localhost tmp]$ chmod 750 words/*
+[smeyers@localhost tmp]$ ls -lR
+.:
+total 1448
+-rw-rw-r-- 1 smeyers smeyers 1479171 Sep 16 20:26 cs-hu153-words-dataset.tgz
+drwx------ 6 smeyers smeyers      50 Oct 27  2017 words
+
+./words:
+total 0
+drwxr-x--- 2 smeyers smeyers 97 Feb  7  2018 a-g
+drwxr-x--- 2 smeyers smeyers 84 Feb  7  2018 h-m
+drwxr-x--- 2 smeyers smeyers 97 Feb  7  2018 n-t
+drwxr-x--- 2 smeyers smeyers 84 Oct 27  2017 u-z
+
+./words/a-g:
+total 1656
+-r--r----- 1 smeyers smeyers 322688 Oct 25  2017 a.txt
+-r--r----- 1 smeyers smeyers 237545 Oct 25  2017 b.txt
+-r--r----- 1 smeyers smeyers 413770 Oct 25  2017 c.txt
+-r--r----- 1 smeyers smeyers 234800 Oct 25  2017 d.txt
+-r--r----- 1 smeyers smeyers 175314 Oct 25  2017 e.txt
+-r--r----- 1 smeyers smeyers 157901 Oct 25  2017 f.txt
+-r--r----- 1 smeyers smeyers 142236 Oct 25  2017 g.txt
+
+./words/h-m:
+total 860
+-r--r----- 1 smeyers smeyers 202282 Oct 25  2017 h.txt
+-r--r----- 1 smeyers smeyers 171212 Oct 25  2017 i.txt
+-r--r----- 1 smeyers smeyers  37540 Oct 25  2017 j.txt
+-r--r----- 1 smeyers smeyers  53723 Oct 25  2017 k.txt
+-r--r----- 1 smeyers smeyers 138301 Oct 25  2017 l.txt
+-r--r----- 1 smeyers smeyers 263325 Oct 25  2017 m.txt
+
+./words/n-t:
+total 1860
+-r--r----- 1 smeyers smeyers 193750 Oct 25  2017 n.txt
+-r--r----- 1 smeyers smeyers 162168 Oct 25  2017 o.txt
+-r--r----- 1 smeyers smeyers 465496 Oct 25  2017 p.txt
+-r--r----- 1 smeyers smeyers  39584 Oct 25  2017 q.txt
+-r--r----- 1 smeyers smeyers 218137 Oct 25  2017 r.txt
+-r--r----- 1 smeyers smeyers 548495 Oct 25  2017 s.txt
+-r--r----- 1 smeyers smeyers 265665 Oct 25  2017 t.txt
+
+./words/u-z:
+total 504
+-r--r----- 1 smeyers smeyers 277747 Oct 25  2017 u.txt
+-r--r----- 1 smeyers smeyers  68067 Oct 25  2017 v.txt
+-r--r----- 1 smeyers smeyers 121814 Oct 25  2017 w.txt
+-r--r----- 1 smeyers smeyers   5906 Oct 25  2017 x.txt
+-r--r----- 1 smeyers smeyers  15250 Oct 25  2017 y.txt
+-r--r----- 1 smeyers smeyers  16818 Oct 25  2017 z.txt
+[smeyers@localhost tmp]$ 

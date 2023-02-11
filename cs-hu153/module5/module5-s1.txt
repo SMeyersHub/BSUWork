@@ -1,0 +1,50 @@
+[smeyers@localhost ~]$ mkdir Activity5
+[smeyers@localhost ~]$ cd Activity5
+[smeyers@localhost Activity5]$ vim
+[smeyers@localhost Activity5]$ chmod +x hello.sh
+[smeyers@localhost Activity5]$ ./hello.sh
+
+[smeyers@localhost Activity5]$ vim hello.sh
+[smeyers@localhost Activity5]$ chmod +x hello.sh
+[smeyers@localhost Activity5]$ ./hello.sh
+Hello world from localhost.localdomain!
+Vendor ID: GenuineIntel
+[smeyers@localhost Activity5]$ vim hello.sh
+[smeyers@localhost Activity5]$ ./hello.sh
+Hello world from localhost.localdomain!
+[smeyers@localhost Activity5]$ vim hello.sh
+[smeyers@localhost Activity5]$ vim hello.sh
+[smeyers@localhost Activity5]$ ./hello.sh
+Hello world from localhost.localdomain!
+Vendor ID: GenuineIntel
+[smeyers@localhost Activity5]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                

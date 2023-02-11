@@ -1,0 +1,50 @@
+[smeyers@localhost ~]$ echo "Scenario 2 - Process Management"
+Scenario 2 - Process Management
+[smeyers@localhost ~]$ sleep 30
+^C
+[smeyers@localhost ~]$ sleep 30
+^Z
+[1]+  Stopped                 sleep 30
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+  4506 pts/1    00:00:00 bash
+  4638 pts/1    00:00:00 sleep
+  4641 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+  4506 pts/1    00:00:00 bash
+  4638 pts/1    00:00:00 sleep
+  4684 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ fg
+sleep 30
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+  4506 pts/1    00:00:00 bash
+  4961 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+  4506 pts/1    00:00:00 bash
+  5033 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps -a
+   PID TTY          TIME CMD
+  5030 pts/2    00:00:00 sleep
+  5043 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ kill sleep
+bash: kill: sleep: arguments must be process or job IDs
+[smeyers@localhost ~]$ kill 5030
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+  4506 pts/1    00:00:00 bash
+  5068 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps -a
+   PID TTY          TIME CMD
+  5072 pts/1    00:00:00 ps                                                     
+[smeyers@localhost ~]$                                                          
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                

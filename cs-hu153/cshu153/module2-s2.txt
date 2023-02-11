@@ -1,0 +1,253 @@
+[smeyers@localhost ~]$ echo "Scnerario - System info"
+Scnerario - System info
+[smeyers@localhost ~]$ whoami
+smeyers
+[smeyers@localhost ~]$ who
+smeyers  :0           2019-09-07 14:51 (:0)
+smeyers  pts/0        2019-09-07 14:51 (:0)
+smeyers  pts/1        2019-09-08 17:37 (:0)
+[smeyers@localhost ~]$ w
+ 17:37:34 up  2:38,  3 users,  load average: 0.00, 0.01, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+smeyers  :0       :0               Sat14   ?xdm?   1:06   0.04s /bin/sh /usr/bi
+smeyers  pts/0    :0               Sat14   26:45m  0.00s  1.64s kdeinit4: kded4
+smeyers  pts/1    :0               17:37    6.00s  0.04s  0.00s w
+[smeyers@localhost ~]$ man w
+[smeyers@localhost ~]$ w -i
+ 17:37:51 up  2:38,  3 users,  load average: 0.00, 0.01, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+smeyers  :0       :0               Sat14   ?xdm?   1:07   0.04s /bin/sh /usr/bi
+smeyers  pts/0    :0               Sat14   26:46m  0.00s  1.64s kdeinit4: kded4
+smeyers  pts/1    :0               17:37    7.00s  0.04s  0.00s w -i
+[smeyers@localhost ~]$ date
+Sun Sep  8 17:38:05 MDT 2019
+[smeyers@localhost ~]$ man date
+[smeyers@localhost ~]$ date +"%T"
+17:38:18
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+ 27739 pts/1    00:00:00 bash
+ 27879 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ man ps
+[smeyers@localhost ~]$ ps -a
+   PID TTY          TIME CMD
+ 27946 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps
+   PID TTY          TIME CMD
+ 27739 pts/1    00:00:00 bash
+ 27950 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ ps -A
+   PID TTY          TIME CMD
+     1 ?        00:00:04 systemd
+     2 ?        00:00:00 kthreadd
+     3 ?        00:00:00 ksoftirqd/0
+     5 ?        00:00:00 kworker/0:0H
+     7 ?        00:00:00 migration/0
+     8 ?        00:00:00 rcu_bh
+     9 ?        00:00:01 rcu_sched
+    10 ?        00:00:00 lru-add-drain
+    11 ?        00:00:00 watchdog/0
+    12 ?        00:00:00 watchdog/1
+    13 ?        00:00:00 migration/1
+    14 ?        00:00:00 ksoftirqd/1
+    16 ?        00:00:00 kworker/1:0H
+    18 ?        00:00:00 kdevtmpfs
+    19 ?        00:00:00 netns
+    20 ?        00:00:00 khungtaskd
+    21 ?        00:00:00 writeback
+    22 ?        00:00:00 kintegrityd
+    23 ?        00:00:00 bioset
+    24 ?        00:00:00 bioset
+    25 ?        00:00:00 bioset
+    26 ?        00:00:00 kblockd
+    27 ?        00:00:00 md
+    28 ?        00:00:00 edac-poller
+    29 ?        00:00:00 watchdogd
+    36 ?        00:00:00 kswapd0
+    37 ?        00:00:00 ksmd
+    38 ?        00:00:00 khugepaged
+    39 ?        00:00:00 crypto
+    47 ?        00:00:00 kthrotld
+    49 ?        00:00:00 kmpath_rdacd
+    50 ?        00:00:00 kaluad
+    51 ?        00:00:00 kpsmoused
+    53 ?        00:00:00 ipv6_addrconf
+    66 ?        00:00:00 deferwq
+    98 ?        00:00:00 kauditd
+   278 ?        00:00:00 nfit
+   279 ?        00:00:00 mpt_poll_0
+   280 ?        00:00:00 ata_sff
+   281 ?        00:00:00 mpt/0
+   338 ?        00:00:00 scsi_eh_0
+   341 ?        00:00:00 scsi_tmf_0
+   350 ?        00:00:00 scsi_eh_1
+   353 ?        00:00:00 scsi_tmf_1
+   356 ?        00:00:00 scsi_eh_2
+   357 ?        00:00:00 scsi_tmf_2
+   361 ?        00:00:00 ttm_swap
+   362 ?        00:00:00 irq/16-vmwgfx
+   436 ?        00:00:00 kdmflush
+   437 ?        00:00:00 bioset
+   447 ?        00:00:00 kdmflush
+   448 ?        00:00:00 bioset
+   461 ?        00:00:00 bioset
+   462 ?        00:00:00 xfsalloc
+   463 ?        00:00:00 xfs_mru_cache
+   464 ?        00:00:00 xfs-buf/dm-0
+   465 ?        00:00:00 xfs-data/dm-0
+   466 ?        00:00:00 xfs-conv/dm-0
+   467 ?        00:00:00 xfs-cil/dm-0
+   468 ?        00:00:00 xfs-reclaim/dm-
+   469 ?        00:00:00 xfs-log/dm-0
+   470 ?        00:00:00 xfs-eofblocks/d
+   471 ?        00:00:01 xfsaild/dm-0
+   472 ?        00:00:00 kworker/1:1H
+   544 ?        00:00:00 systemd-journal
+   566 ?        00:00:00 systemd-udevd
+   571 ?        00:00:00 lvmetad
+   732 ?        00:00:00 xfs-buf/sda1
+   733 ?        00:00:00 xfs-data/sda1
+   734 ?        00:00:00 xfs-conv/sda1
+   735 ?        00:00:00 xfs-cil/sda1
+   736 ?        00:00:00 xfs-reclaim/sda
+   737 ?        00:00:00 xfs-log/sda1
+   738 ?        00:00:00 xfs-eofblocks/s
+   740 ?        00:00:00 xfsaild/sda1
+   777 ?        00:00:00 auditd
+   779 ?        00:00:00 audispd
+   781 ?        00:00:00 sedispatch
+   783 ?        00:00:00 rpciod
+   784 ?        00:00:00 xprtiod
+   805 ?        00:00:00 VGAuthService
+   806 ?        00:00:01 polkitd
+   807 ?        00:00:01 rngd
+   808 ?        00:00:00 lsmd
+   809 ?        00:00:00 rpcbind
+   810 ?        00:00:08 vmtoolsd
+   812 ?        00:00:00 ModemManager
+   813 ?        00:00:00 irqbalance
+   815 ?        00:00:00 alsactl
+   817 ?        00:00:00 rtkit-daemon
+   818 ?        00:00:00 udisksd
+   819 ?        00:00:00 gssproxy
+   821 ?        00:00:00 smartd
+   823 ?        00:00:00 accounts-daemon
+   838 ?        00:00:00 dbus-daemon
+   844 ?        00:00:00 chronyd
+   857 ?        00:00:00 kworker/0:1H
+   864 ?        00:00:00 systemd-logind
+   870 ?        00:00:00 abrtd
+   871 ?        00:00:00 abrt-watch-log
+   873 ?        00:00:00 abrt-watch-log
+   896 ?        00:00:00 firewalld
+   940 ?        00:00:00 NetworkManager
+   949 ?        00:00:01 tuned
+   953 ?        00:00:01 cupsd
+   976 ?        00:00:00 gdm
+   978 ?        00:00:00 crond
+   979 ?        00:00:00 atd
+  1229 ?        00:00:00 master
+  1241 ?        00:00:00 qmgr
+  1359 tty1     00:00:14 X
+  1502 ?        00:00:00 upowerd
+  1526 ?        00:00:00 rsyslogd
+  1640 ?        00:00:00 boltd
+  1649 ?        00:00:00 wpa_supplicant
+  1725 ?        00:00:00 colord
+  1790 ?        00:00:00 gdm-session-wor
+  1806 ?        00:00:00 startkde
+  1815 ?        00:00:00 dbus-launch
+  1816 ?        00:00:00 dbus-daemon
+  1885 ?        00:00:00 imsettings-daem
+  1890 ?        00:00:00 gvfsd
+  1939 ?        00:00:00 ssh-agent
+  1997 ?        00:00:00 start_kdeinit
+  1998 ?        00:00:00 kdeinit4
+  1999 ?        00:00:00 klauncher
+  2001 ?        00:00:01 kded4
+  2003 ?        00:00:00 gam_server
+  2008 ?        00:00:00 kglobalaccel
+  2015 ?        00:00:00 kwalletd
+  2020 ?        00:00:00 kactivitymanage
+  2026 ?        00:00:00 kwrapper4
+  2027 ?        00:00:00 ksmserver
+  2036 ?        00:00:02 kwin
+  2055 ?        00:00:10 plasma-desktop
+  2064 ?        00:00:00 ksysguardd
+  2068 ?        00:00:00 kuiserver
+  2072 ?        00:00:00 akonadi_control
+  2076 ?        00:00:00 akonadiserver
+  2080 ?        00:00:07 mysqld
+  2104 ?        00:00:00 knotify4
+  2120 ?        00:00:00 akonadi_agent_l
+  2121 ?        00:00:00 akonadi_agent_l
+  2122 ?        00:00:00 akonadi_agent_l
+  2123 ?        00:00:00 akonadi_agent_l
+  2124 ?        00:00:00 akonadi_maildis
+  2125 ?        00:00:00 akonadi_nepomuk
+  2159 ?        00:00:10 vmtoolsd
+  2165 ?        00:00:01 krunner
+  2169 ?        00:00:00 pulseaudio
+  2170 ?        00:00:00 abrt-applet
+  2185 ?        00:00:00 tracker-miner-u
+  2190 ?        00:00:00 polkit-kde-auth
+  2193 ?        00:00:00 at-spi-bus-laun
+  2218 ?        00:00:00 dbus-daemon
+  2223 ?        00:00:00 at-spi2-registr
+  2226 ?        00:00:00 tracker-extract
+  2234 ?        00:00:00 tracker-miner-a
+  2242 ?        00:00:00 klipper
+  2249 ?        00:00:00 kmix
+  2254 ?        00:00:00 xsettings-kde
+  2282 ?        00:00:00 dconf-service
+  2304 ?        00:00:00 tracker-store
+  2324 ?        00:00:00 gvfs-udisks2-vo
+  4355 ?        00:00:00 kworker/u256:0
+ 23925 ?        00:00:00 kworker/u256:1
+ 24092 ?        00:00:00 kworker/0:0
+ 25524 ?        00:00:00 pickup
+ 27112 ?        00:00:00 kworker/1:2
+ 27167 ?        00:00:00 kworker/0:1
+ 27529 ?        00:00:00 kworker/1:1
+ 27560 ?        00:00:00 kworker/0:2
+ 27736 ?        00:00:00 konsole
+ 27739 pts/1    00:00:00 bash
+ 27758 ?        00:00:00 abrt-dbus
+ 27954 pts/1    00:00:00 ps
+[smeyers@localhost ~]$ free
+              total        used        free      shared  buff/cache   available
+Mem:        4026360      659576     2697936       18180      668848     3040516
+Swap:       2097148           0     2097148
+[smeyers@localhost ~]$ man free
+[smeyers@localhost ~]$ free -h
+              total        used        free      shared  buff/cache   available
+Mem:           3.8G        644M        2.6G         17M        653M        2.9G
+Swap:          2.0G          0B        2.0G
+[smeyers@localhost ~]$ nproc
+2
+[smeyers@localhost ~]$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    1
+Core(s) per socket:    1
+Socket(s):             2
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 158
+Model name:            Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+Stepping:              9
+CPU MHz:               2807.996
+BogoMIPS:              5615.99
+Hypervisor vendor:     VMware
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              6144K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid mpx rdseed adx smap clflushopt xsaveopt xsavec arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+[smeyers@localhost ~]$ 

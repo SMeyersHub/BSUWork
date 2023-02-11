@@ -1,0 +1,624 @@
+[smeyers@localhost ~]$ echo "Scenario 1 -Hacking your shell"
+Scenario 1 -Hacking your shell
+[smeyers@localhost ~]$ history
+    1  sudo psswrd
+    2  sudo passwd
+    3  sudo yum update
+    4  sudo kwrite /etc/sysconfig/selinux
+    5  sudo reboot
+    6  sudo yum group list
+    7  sudo yum group install "Development Tools"
+    8  sudo yum group install "Web Server"
+    9  sudo yum install kernel-devel
+   10  sudo yum install qt-deve xz-libs openssl-devel elfutils-libelf-devel
+   11  sudo yum install valgrind gitk gvim
+   12  sudo yum install glibc-static
+   13  sudo yum install libreoffice
+   14  sudo kwrite /etc/yum.repos.d/google-chrome.repo
+   15  sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+   16  sudo yum install google-chrome stable
+   17  sudo yum install google-chrome-stable
+   18  cd ~/Downloads
+   19  sudo yum install jdk-12.0.2_linux-x64_bin.rpm
+   20  sudo alternatives --install /usr/b
+   21  clear
+   22  sudo alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
+   23  sudo alternatives --config java
+   24  sudo alternatives install /usr/bin/javac javac /usr/java/default/bin/javac 20000
+   25  sudo alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 20000
+   26  sudo alternatives --config javac
+   27  sudo alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 20000
+   28  sudo alternatives --config jar
+   29  java -version
+   30  cd ~/Downloads
+   31  ls
+   32  tar xzvf eclipse-jdk-oxygen-linux.tar.gz
+   33  tar xzvf eclipse-jdk-cdt-oxygen-linux.tar.gz
+   34  mv eclipse/ ~                                                            
+   35  kwrite ~/.bashrc                                                         
+   36  source ~/.bashrc                                                         
+   37  eclipse                                                                  
+   38  sudo yum install readline-devel                                          
+   39  sudo yum install gvim                                                    
+   40  sudo yum search gvim                                                     
+   41  sudo yum provides gvim                                                   
+   42  sudo yum install vim-X11                                                 
+   43  eclipse                                                                  
+   44  echo "Scenario 1 - File system navigation and utilities"
+   45  pwd
+   46  whoami
+   47  echo "Scenario 1 - File system navigation and utilities"
+   48  pwd
+   49  mkdir tmp
+   50  cd tmp
+   51  pwd
+   52  ls /bin
+   53  cp tmp
+   54  cp /bin tmp
+   55  cp bin tmp
+   56  clear
+   57  echo "Scenario 1 - File system navigation and utilities"
+   58  pwd
+   59  mkdir tmp
+   60  cd tmp
+   61  pwd
+   62  ls /bin
+   63  cp cp tmp
+   64  mv cp tmp
+   65  cp ~/bin/cp
+   66  cp --help
+   67  cp -R /bin/cp
+   68  ls
+   69  tree
+   70  ls ~
+   71  map cp
+   72  man cp
+   73  clear
+   74  ls /bin
+   75  cp /bin/cp tmp
+   76  ls
+   77  clear
+   78  echo "Scenario 1 - File system navigation and utilities"
+   79  [wd
+   80  pwd
+   81  mkdir tmp
+   82  cd tmp
+   83  pwd
+   84  ls
+   85  echo "Scenario 1 - File system navigation and utilities"
+   86  pwd
+   87  mkdir tmp
+   88  cd tmp
+   89  rm tmp
+   90  clear
+   91  rm tmp
+   92  rmdir tmp
+   93  clear
+   94  echo "Scenario 1 - File system navigation and utilities"
+   95  pwd
+   96  mkdir tmp
+   97  cd tmp
+   98  pwd
+   99  ls /bin
+  100  cp /bin/cp cp
+  101  mv cp mycp
+  102  cmp /bin/cp mycp
+  103  touch fakecp
+  104  cmp bin/cp fakecp
+  105  cmp /bin/cp fakecp
+  106  rmdir tmp
+  107  rmp tmp
+  108  rm tmp
+  109  cd ~
+  110  ls
+  111  rmdir tmp
+  112  rm - fR tmp
+  113  rm rm -fR tmp
+  114  ls
+  115  exit
+  116  cat module2-s1.txt
+  117  cat ~/documents/module2-s1.txt
+  118  s
+  119  cd documents
+  120  ls
+  121  cat ~/Documents/module2-s1.txt
+  122  exit
+  123  echo "Scenario 2 - System info"
+  124  whoami
+  125  who
+  126  w
+  127  man w
+  128  w -i --ip-addr
+  129  clea
+  130  clear
+  131  man w
+  132  w -i
+  133  w --i
+  134  w --ip-addr
+  135  man w
+  136  w -i
+  137  w-i
+  138  w --ip-addr
+  139  w
+  140  clear
+  141  echo "Scenario 2 - System info"
+  142  whoami
+  143  who
+  144  w
+  145  man w
+  146  w -i smeyers
+  147  date
+  148  man date
+  149  date %T
+  150  date %t
+  151  man date
+  152  date -help
+  153  date --help
+  154  date "%T"
+  155  date '%T'
+  156  date T
+  157  date -T
+  158  date --time
+  159  man date
+  160  date +"%T"
+  161  exit
+  162  echo "Scnerario - System info"
+  163  whoami
+  164  who
+  165  w
+  166  man w
+  167  w -i
+  168  date
+  169  man date
+  170  date +"%T"
+  171  ps
+  172  man ps
+  173  ps -a
+  174  ps
+  175  ps -A
+  176  free
+  177  man free
+  178  free -h
+  179  nproc
+  180  lscpu
+  181  exit
+  182  echo "Scenario 3 - Text Utilities"
+  183  cat /etc/passwd
+  184  cat /etc/shadow
+  185  sort /etc/passwd
+  186  grep /etc/passwd
+  187  root /etc/passwd
+  188  grep root /etc/passwd
+  189  grep rootuser /etc/passwd
+  190  wc /etc/passwd
+  191  man w
+  192  man wc
+  193  wc -l
+  194  wc -l /etc/passwd
+  195  tail 10 /etc/passwd
+  196  man tail
+  197  tail --lines=25 /etc/passwd
+  198  exit
+  199  echo "Scenario 3 - Text Utilities"
+  200  cat /etc/passwd
+  201  cat /etc/shadow
+  202  sort /etc/passwd
+  203  grep root /etc/passwd
+  204  wc /etc/passwd
+  205  /wc -l /etc/passwd
+  206  wc -l /etc/passwd
+  207  tail /etc/passwd
+  208  man tail
+  209  tail --lines=35 /etc/passwd
+  210  tail --lines=25 /etc/passwd
+  211  exit
+  212  ssh onyx.boisestate.edu
+  213  clear
+  214  exit
+  215  ssh stevenmeyers946@onyx.boisestate.edu
+  216  sudo ssh stevenmeyers946@onyx.boisestate.edu
+  217  exit
+  218  man sssh
+  219  man ssh
+  220  ssh stevenmeyers946@onyx.boisestate.edu
+  221  host onyx.boisestate.edu
+  222  w
+  223  w -i
+  224  man w
+  225  w
+  226  w -i
+  227  claer
+  228  clear
+  229  ssh stevenmeyers946@u.boisestate.edu
+  230  ssh stevenmeyers@onyx.boisestate.edu
+  231  ssh stevenmeyers946@onyx.boisestate.edu
+  232  scp cpu-details.txt
+  233  man scp
+  234  scp stevenmeyers946@onyx.boisestate.edu cpu-details.txt smeyers@localhost cpu-details.txt
+  235  scp stevenmeyers946@onyx.boisestate.edu cpu-details.txt
+  236  scp cpu-details.txt
+  237  scp cpu-details.txt stevenmeyers946@onyx.boisestate.edu
+  238  scp cpu-details.txt stevenmeyers@onyx.boisestate.edu
+  239  scp stevenmeyers946@onyx.boisestate.edu:/cpu-details.txt /local/Documents
+  240  ssh stevenmeyers946@onyx.boisestate.edu
+  241  scp stevenmeyers946@onyx.boisestate.edu:cpu-details.txt /local/Documents
+  242  scp stevenmeyers946@onyx.boisestate.edu:cpu-details.txt /home/smeyers/Documents
+  243  exit
+  244  scp /home/smeyers/Documents/module2-s1.txt stevenmeyers946@onyx.boisestate.edu:/cs221
+  245  scp /home/smeyers/Documents/module2-s1.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221
+  246  scp /home/smeyers/Documents/module2-s2.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221
+  247  scp /home/smeyers/Documents/module2-s3.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221
+  248  scp /home/smeyers/Documents/module2-s4.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221
+  249  scp /home/smeyers/Documents/module2-s4.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221/cshu153
+  250  scp /home/smeyers/Documents/module2-s3.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221/cshu153
+  251  scp /home/smeyers/Documents/module2-s2.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221/cshu153
+  252  scp /home/smeyers/Documents/module2-s1.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs221/cshu153
+  253  echo "Scenario 1 - Scavenger Hunt Linux Style"
+  254  pwd
+  255  which cp
+  256  which mv
+  257  which ls
+  258  which cd
+  259  which echo
+  260  which pwd
+  261  which touch
+  262  which cat
+  263  which which
+  264  which cp,mv,ls
+  265  cd ~/usr/bin
+  266  cd /usr/bin
+  267  echo "Scenario 1 - Scavenger Hunt Linux Style
+  268  echo "Scenario 1 - Scavenger Hunt Linux Style"
+  269  pwd
+  270  which cp
+  271  which mv
+  272  which ls
+  273  which cd
+  274  which echo
+  275  which pwd
+  276  which touch
+  277  which cat
+  278  which which
+  279  cd /usr/bin
+  280  du
+  281  du -h
+  282  rm cp
+  283  ls -l
+  284  cd /etc
+  285  ls -l
+  286  ls -l /etc/passwd
+  287  ls -l /etc/shadow
+  288  exit
+  289  echo "Scenario 2 - Linux File System Lockdown"
+  290  mkdir tmp 
+  291  cd tmp
+  292  wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tqz
+  293  wget https://www.github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tqz
+  294  ls
+  295  wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+  296  tar cs-hu153-words-dataset.tgz
+  297  tar xvzf ch-hu153-words-dataset.tgz
+  298  tar xvzf cs-hu153-words-dataset.tgz
+  299  ls -R words
+  300  tree words
+  301  sudo yum tree
+  302  sudo group add developers
+  303  sudo groupadd developers
+  304  sudo chgrp words developers
+  305  man chgrp
+  306  sudo chgrp developers words
+  307  man chmod
+  308  ls developers
+  309  chmod words
+  310  chmod rx words
+  311  chmod -rx
+  312  chmod -rx developers
+  313  chmod -rx ugo words
+  314  chmod -rx words
+  315  chmod -r- *.txt
+  316  chmod -r- words/*.txt
+  317  sudo chmod -r words/*.txt
+  318  chmod g=rx words
+  319  chmod g=rx words/a-g
+  320  chmod g=r words/*.txt
+  321  chmod g=r *.txt
+  322  chmod -R g=r *.txt
+  323  sudo chmod g=r words/*.txt
+  324  ls words
+  325  ls
+  326  sudo cd words
+  327  ls
+  328  exit
+  329  echo "Scenario 2 - Linux File System Lockdown"
+  330  mkdir tmp
+  331  rmdir tmp
+  332  rm -r tmp
+  333  sudo rm -r tmp
+  334  ls
+  335  clear
+  336  echo "Scenario 2 - Linux File System Lockdown"
+  337  mkdir tmp
+  338  cd tmp
+  339  wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+  340  tar xvzf cs-hu153-words-dataset.tgz
+  341  sudo groupadd developers
+  342  sudo groupdel developers
+  343  sudo groupadd developers
+  344  sudo chgrp words developers
+  345  chgrp developers words
+  346  sudo chgrp developers words
+  347  chmod developers=r words
+  348  chmod g=rx words
+  349  chmod g=x words/*.txt
+  350  chmod g=x words/*/*.txt
+  351  ls -lR
+  352  chmod 46 words
+  353  ls -lR words
+  354  ls -lR
+  355  chmod 23456 words
+  356  chmod 123 words
+  357  ls -lR
+  358  chmod o=wrx
+  359  chmod o=wrx words
+  360  chmod g=wrx words
+  361  ls -lR
+  362  chmod 7421
+  363  chmod 7421 words
+  364  chmod 541 words/*
+  365  sudo chmod 541 words/*
+  366  sudo chmod 54 words/*.txt
+  367  sudo chmod 54 words/*/*.txt
+  368  ls -lR
+  369  quit
+  370  end
+  371  exit
+  372  echo "Scenario 2 - Linux File System Lockdown"
+  373  rm -r tmp
+  374  sudo rm -r tmp
+  375  ls
+  376  groupdel developers
+  377  sudo groupdel developers
+  378  exit
+  379  echo "Scenario 2 - Linux File System Lockdown"
+  380  mkdir tmp
+  381  cd tmp
+  382  wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+  383  tar xvzf cs-hu153-words-dataset.tgz
+  384  ls -R words
+  385  sudo groupadd developers
+  386  sudo chgrp developers words
+  387  chmod 754 words/*
+  388  chmod 744 words/*/*.txt
+  389  ls -lR
+  390  chmod 740 words/*
+  391  chmod 440 words/*/*.txt
+  392  ls -lR
+  393  exit
+  394  echo "Scenario 3 - Putting the Squeeze on Files"
+  395  mkdir tmp
+  396  cd tmp
+  397  wget https://github.com/BoiseState/CS121-resources/archive/master.zip
+  398  unzip master.zip
+  399  cd master
+  400  ls
+  401  cd CS121-resources-master
+  402  ls
+  403  cd examples
+  404  du -h chap07
+  405  zip chap07
+  406  man zip
+  407  zip chap07.zip
+  408  search
+  409  ls
+  410  du -h chap07.zip
+  411  zip chap07 chap07.zip
+  412  zip -r chap07.zip chap07
+  413  tar cvjf chap07.tar.bz2 chap07
+  414  du -h chap07
+  415  du -h chap07.zip
+  416  du -h chap07.tar.bz2
+  417  tar czvf chap07.tgz chap07
+  418  du -h chap07.tgz
+  419  scp chap07.tgz stevenmeyers946@onyx.boisestate.edu
+  420  ssh stevenmeyers946@onyx.boisestate.edu
+  421  scp chap07.tgz stevenmeyers946@onyx.boisestate.edu:/home/downloads
+  422  scp chap07.tgz stevenmeyers946@onyx.boisestate.edu:~
+  423  ssh stevenmeyers946@onyx.boisestate.edu
+  424  cd ~
+  425  rmdir tmp
+  426  rmdir -R tmp
+  427  rmdir -A tmp
+  428  rm -r tmp
+  429  rm -rf tmp
+  430  ls
+  431  exit
+  432  echo "Scenario 4 - Room to Grow"
+  433  df -h
+  434  lsblk
+  435  sudo fdisk /dev/sdb
+  436  lsblk
+  437  sudo mkfs -t ext4/dev/sdb1
+  438  sudo mkfs -t ext4 /dev/sdb1
+  439  mkdir workspace
+  440  sudo mount -t ext4 /dev/sdb1 ~/workspace
+  441  lsblk
+  442  df -h
+  443  ls -l
+  444  chown workspace smeyers
+  445  chown smeyers workspace
+  446  sudo chown smeeyrs workplace
+  447  sudo chown smeyers workspace
+  448  umount workspace
+  449  sudo umount /dev/sdb1 ~/workspace
+  450  sudo umount ~/workspace
+  451  lsblk
+  452  exit
+  453  ls
+  454  scp ~/Documents/module3-s1.txt
+  455  scp ~/Documents/module3-s1.txt stevenmeyers946@u.boisestate.edu
+  456  scp ~/Documents/module3-s1.txt stevenmeyers946@u.boisestate.edu:/home/STEVENMEYERS946/cs-hu153
+  457  scp ~/Documents/module3-s1.txt stevenmeyers946@u.boisestate.edu
+  458  scp ~/Documents/module3-s1.txt stevenmeyers946@onyx.boisestate.edu
+  459  scp ~/Documents/module3-s1.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153
+  460  scp ~/Documents/module3-s2.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153
+  461  scp ~/Documents/module3-s3.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153
+  462  scp ~/Documents/module3-s4.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153
+  463  scp ~/Documents/module3-s1.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153/module3
+  464  scp ~/Documents/module3-s2.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153/module3
+  465  scp ~/Documents/module3-s3.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153/module3
+  466  scp ~/Documents/module3-s4.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153/module3
+  467  quit
+  468  exit
+  469  echo "Scenario 2 - Linux File System Lockdown"
+  470  mkdir tmp
+  471  cd tmp
+  472  wget https://github.com/BoiseState/CS-HU153-resources/raw/master/activities/cs-hu153-words-dataset.tgz
+  473  tar xvzf cs-hu153-words-dataset.tgz
+  474  groupadd developers
+  475  sudo groupadd developers
+  476  ls -lR
+  477  chmod 754 words/*
+  478  chmod 744 words/*/*.txt
+  479  ls -lR
+  480  chmod 440 words/*/*.txt
+  481  ls -lR
+  482  chmod 750 words/*
+  483  ls -lR
+  484  exit
+  485  scp ~/Documents/module3-s2.txt stevenmeyers946@onyx.boisestate.edu:/home/STEVENMEYERS946/cs-hu153/module3
+  486  ssh stevenmeyers@onyx.boisestate.edu
+  487  ssh stevenmeyers946@onyx.boisestate.edu
+  488  echo "Scenario 1 - Hacking your shell"
+  489  history
+  490  export
+  491  echo PATH
+  492  man eho
+  493  man echo
+  494  echo "Scenario 1 -Hacking your shell"
+  495  history
+[smeyers@localhost ~]$ export
+declare -x COLORFGBG="15;0"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-62uDeilbgF,guid=91872568cc1afcd09b75b0125d87b99d"
+declare -x DESKTOP_SESSION="1-kde-plasma-standard"
+declare -x DISPLAY=":0"
+declare -x GDMSESSION="1-kde-plasma-standard"
+declare -x GDM_LANG="en_US.UTF-8"
+declare -x GS_LIB=""
+declare -x GTK2_RC_FILES="/home/smeyers/.gtkrc-2.0-kde4"
+declare -x GTK_IM_MODULE="gtk-im-context-simple"
+declare -x HISTCONTROL="ignoredups"
+declare -x HISTSIZE="1000"
+declare -x HOME="/home/smeyers"
+declare -x HOSTNAME="localhost.localdomain"
+declare -x IMSETTINGS_INTEGRATE_DESKTOP="yes"
+declare -x IMSETTINGS_MODULE="none"
+declare -x KDEDIRS="/usr"
+declare -x KDE_FULL_SESSION="true"
+declare -x KDE_MULTIHEAD="false"
+declare -x KDE_SESSION_UID="1000"
+declare -x KDE_SESSION_VERSION="4"
+declare -x KONSOLE_DBUS_SERVICE=":1.72"
+declare -x KONSOLE_DBUS_SESSION="/Sessions/1"
+declare -x KONSOLE_DBUS_WINDOW="/Windows/1"
+declare -x KONSOLE_PROFILE_NAME=""
+declare -x LANG="en_US.UTF-8"
+declare -x LANGUAGE=""
+declare -x LESSOPEN="||/usr/bin/lesspipe.sh %s"
+declare -x LOGNAME="smeyers"
+declare -x LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:"
+declare -x MAIL="/var/spool/mail/smeyers"
+declare -x OLDPWD
+declare -x PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/smeyers/.local/bin:/home/smeyers/bin"
+declare -x PROFILEHOME="/home/smeyers"
+declare -x PWD="/home/smeyers"
+declare -x QTDIR="/usr/lib64/qt-3.3"
+declare -x QTINC="/usr/lib64/qt-3.3/include"
+declare -x QTLIB="/usr/lib64/qt-3.3/lib"
+declare -x QT_GRAPHICSSYSTEM_CHECKED="1"
+declare -x QT_IM_MODULE="xim"
+declare -x QT_PLUGIN_PATH="/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins:/home/smeyers/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/"
+declare -x SESSION_MANAGER="local/unix:@/tmp/.ICE-unix/2049,unix/unix:/tmp/.ICE-unix/2049"
+declare -x SHELL="/bin/bash"
+declare -x SHELL_SESSION_ID="03fc7489f0994000a10be7cc60d5af3d"
+declare -x SHLVL="3"
+declare -x SSH_AGENT_PID="1961"
+declare -x SSH_ASKPASS="/usr/bin/ksshaskpass"
+declare -x SSH_AUTH_SOCK="/tmp/ssh-gBzq7LtT13en/agent.1829"
+declare -x TERM="xterm-256color"
+declare -x USER="smeyers"
+declare -x USERNAME="smeyers"
+declare -x WINDOWID="20971547"
+declare -x WINDOWPATH="1"
+declare -x XAUTHORITY="/tmp/kde-smeyers/xauth-1000-_0"
+declare -x XCURSOR_THEME="Adwaita"
+declare -x XDG_CURRENT_DESKTOP="KDE"
+declare -x XDG_DATA_DIRS="/home/smeyers/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/"
+declare -x XDG_MENU_PREFIX="kde4-"
+declare -x XDG_RUNTIME_DIR="/run/user/1000"
+declare -x XDG_SEAT="seat0"
+declare -x XDG_SESSION_DESKTOP="1-kde-plasma-standard"
+declare -x XDG_SESSION_ID="1"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x XDG_VTNR="1"
+declare -x XMODIFIERS="@im=none"
+[smeyers@localhost ~]$ echo %PATH%
+%PATH%
+[smeyers@localhost ~]$ echo PATH
+PATH
+[smeyers@localhost ~]$ echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/smeyers/.local/bin:/home/smeyers/bin
+[smeyers@localhost ~]$ man export
+[smeyers@localhost ~]$ export PATH=$PATH:.
+[smeyers@localhost ~]$ echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/smeyers/.local/bin:/home/smeyers/bin:.
+[smeyers@localhost ~]$ alias
+alias eclipse='~/eclipse/eclipse >& /dev/null'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias vi='vim'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[smeyers@localhost ~]$ alias t = date +%r
+bash: alias: t: not found
+bash: alias: =: not found
+bash: alias: date: not found
+bash: alias: +%r: not found
+[smeyers@localhost ~]$ alias t ='date +%r'
+bash: alias: t: not found
+bash: alias: =date +%r: not found
+[smeyers@localhost ~]$ alias t='date +%r'
+[smeyers@localhost ~]$ t
+12:31:45 PM
+[smeyers@localhost ~]$ kwrite .bashrc
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-visio.template.macroEnabled.main+xml" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-excel.sheet.binary.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-excel.addin.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-visio.drawing.macroEnabled.main+xml" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-powerpoint.slideshow.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-visio.stencil.macroEnabled.main+xml" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-excel.sheet.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-powerpoint.presentation.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-word.template.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-excel.template.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-powerpoint.template.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-word.document.macroEnabled.12" 
+kwrite(3466) KMimeTypeRepository::parents: "/usr/share/mime/subclasses"  refers to unknown mimetype  "application/vnd.ms-powerpoint.slide.macroEnabled.12" 
+[smeyers@localhost ~]$ source ~/.bashrc
+[smeyers@localhost ~]$ alias
+alias cp='cp -i'
+alias eclipse='~/eclipse/eclipse >& /dev/null'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias t='date +%r'
+alias vi='vim'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[smeyers@localhost ~]$ 

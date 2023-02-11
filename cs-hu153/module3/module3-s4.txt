@@ -1,0 +1,168 @@
+[smeyers@localhost ~]$ echo "Scenario 4 - Room to Grow"
+Scenario 4 - Room to Grow
+[smeyers@localhost ~]$ df -h
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/mapper/cl-root   17G  7.6G  9.5G  45% /
+devtmpfs             2.0G     0  2.0G   0% /dev
+tmpfs                2.0G     0  2.0G   0% /dev/shm
+tmpfs                2.0G   13M  2.0G   1% /run
+tmpfs                2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs                2.0G  8.0K  2.0G   1% /tmp
+/dev/sda1           1014M  209M  806M  21% /boot
+tmpfs                394M   48K  394M   1% /run/user/1000
+[smeyers@localhost ~]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0   20G  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0   19G  0 part 
+  ├─cl-root 253:0    0   17G  0 lvm  /
+  └─cl-swap 253:1    0    2G  0 lvm  [SWAP]
+sdb           8:16   0    8G  0 disk 
+sr0          11:0    1  1.8G  0 rom  
+[smeyers@localhost ~]$ sudo fdisk /dev/sdb
+[sudo] password for smeyers: 
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table
+Building a new DOS disklabel with disk identifier 0x30000978.
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1): 1
+First sector (2048-16777215, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-16777215, default 16777215): 
+Using default value 16777215
+Partition 1 of type Linux and of size 8 GiB is set
+
+Command (m for help): p
+
+Disk /dev/sdb: 8589 MB, 8589934592 bytes, 16777216 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x30000978
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048    16777215     8387584   83  Linux
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[smeyers@localhost ~]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0   20G  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0   19G  0 part 
+  ├─cl-root 253:0    0   17G  0 lvm  /
+  └─cl-swap 253:1    0    2G  0 lvm  [SWAP]
+sdb           8:16   0    8G  0 disk 
+└─sdb1        8:17   0    8G  0 part 
+sr0          11:0    1  1.8G  0 rom  
+[smeyers@localhost ~]$ sudo mkfs -t ext4/dev/sdb1
+Usage:
+ mkfs [options] [-t <type>] [fs-options] <device> [<size>]
+
+Options:
+ -t, --type=<type>  filesystem type; when unspecified, ext2 is used
+     fs-options     parameters for the real filesystem builder
+     <device>       path to the device to be used
+     <size>         number of blocks to be used on the device
+ -V, --verbose      explain what is being done;
+                      specifying -V more than once will cause a dry-run
+ -V, --version      display version information and exit;
+                      -V as --version must be the only option
+ -h, --help         display this help text and exit
+
+For more information see mkfs(8).
+[smeyers@localhost ~]$ sudo mkfs -t ext4 /dev/sdb1
+mke2fs 1.42.9 (28-Dec-2013)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+524288 inodes, 2096896 blocks
+104844 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=2147483648
+64 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks: 
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done 
+
+[smeyers@localhost ~]$ mkdir workspace
+[smeyers@localhost ~]$ sudo mount -t ext4 /dev/sdb1 ~/workspace
+[smeyers@localhost ~]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0   20G  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0   19G  0 part 
+  ├─cl-root 253:0    0   17G  0 lvm  /
+  └─cl-swap 253:1    0    2G  0 lvm  [SWAP]
+sdb           8:16   0    8G  0 disk 
+└─sdb1        8:17   0    8G  0 part /home/smeyers/workspace
+sr0          11:0    1  1.8G  0 rom  
+[smeyers@localhost ~]$ df -h
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/mapper/cl-root   17G  7.6G  9.5G  45% /
+devtmpfs             2.0G     0  2.0G   0% /dev
+tmpfs                2.0G     0  2.0G   0% /dev/shm
+tmpfs                2.0G   13M  2.0G   1% /run
+tmpfs                2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs                2.0G   56K  2.0G   1% /tmp
+/dev/sda1           1014M  209M  806M  21% /boot
+tmpfs                394M   48K  394M   1% /run/user/1000
+/dev/sdb1            7.8G   36M  7.3G   1% /home/smeyers/workspace
+[smeyers@localhost ~]$ ls -l
+total 4
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Desktop
+drwxr-xr-x. 2 smeyers smeyers  183 Sep 16 19:57 Documents
+drwxr-xr-x. 2 smeyers smeyers   85 Sep  2 14:07 Downloads
+drwxr-xr-x  8 smeyers smeyers  210 Sep  2 14:22 eclipse
+drwxrwxr-x  3 smeyers smeyers   23 Sep  2 14:09 eclipse-workspace
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Music
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Pictures
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Public
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Templates
+drwxr-xr-x. 2 smeyers smeyers    6 Sep  2 13:36 Videos
+drwxr-xr-x  3 root    root    4096 Sep 16 20:08 workspace
+[smeyers@localhost ~]$ chown workspace smeyers
+chown: invalid user: ‘workspace’
+[smeyers@localhost ~]$ chown smeyers workspace
+chown: changing ownership of ‘workspace’: Operation not permitted
+[smeyers@localhost ~]$ sudo chown smeeyrs workplace
+chown: invalid user: ‘smeeyrs’
+[smeyers@localhost ~]$ sudo chown smeyers workspace
+[smeyers@localhost ~]$ umount workspace
+umount: /home/smeyers/workspace: umount failed: Operation not permitted
+[smeyers@localhost ~]$ sudo umount /dev/sdb1 ~/workspace
+umount: /home/smeyers/workspace: not mounted
+[smeyers@localhost ~]$ sudo umount ~/workspace
+umount: /home/smeyers/workspace: not mounted
+[smeyers@localhost ~]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0   20G  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0   19G  0 part 
+  ├─cl-root 253:0    0   17G  0 lvm  /
+  └─cl-swap 253:1    0    2G  0 lvm  [SWAP]
+sdb           8:16   0    8G  0 disk 
+└─sdb1        8:17   0    8G  0 part 
+sr0          11:0    1  1.8G  0 rom  
+[smeyers@localhost ~]$ 
